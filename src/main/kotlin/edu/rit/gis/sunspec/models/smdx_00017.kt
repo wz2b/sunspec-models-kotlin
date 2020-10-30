@@ -21,13 +21,13 @@ class Model_17 {
                  description="Interface baud rate in bits per second",
                  notes="Interface baud rate in bits per second")
             
-   var Rte: UInt? = null
+   var Rte: Int? = null
 
    @SunSpecPoint(id="Bits", label="Bits", offset=6, len=1, type="uint16",
                  description="Number of data bits per character",
                  notes="Number of data bits per character")
             
-   var Bits: UShort? = null
+   var Bits: Int? = null
 
    @SunSpecPoint(id="Pty", label="Parity", offset=7, len=0, type="enum16",
                  description="Bitmask value.  Parity setting",

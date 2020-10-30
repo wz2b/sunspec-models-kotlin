@@ -45,7 +45,7 @@ class Model_1 {
                  description="Modbus device address",
                  notes="Modbus device address")
             
-   var DA: UShort? = null
+   var DA: Int? = null
 
    @SunSpecPoint(id="Pad", label="", offset=65, len=1, type="pad",
                  description="Force even alignment",

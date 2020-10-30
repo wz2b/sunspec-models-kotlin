@@ -99,13 +99,13 @@ class Model_220 {
                  description="Total Real Energy Exported",
                  notes="Total Real Energy Exported")
             
-   var TotWhExp: UInt? = null
+   var TotWhExp: Long? = null
 
    @SunSpecPoint(id="TotWhImp", label="Total Watt-hours Imported", offset=16, len=2, type="acc32",
                  description="Total Real Energy Imported",
                  notes="Total Real Energy Imported")
             
-   var TotWhImp: UInt? = null
+   var TotWhImp: Long? = null
 
    @SunSpecPoint(id="TotWh_SF", label="", offset=18, len=1, type="sunssf",
                  description="Real Energy scale factor",
@@ -117,13 +117,13 @@ class Model_220 {
                  description="Total Apparent Energy Exported",
                  notes="Total Apparent Energy Exported")
             
-   var TotVAhExp: UInt? = null
+   var TotVAhExp: Long? = null
 
    @SunSpecPoint(id="TotVAhImp", label="Total VA-hours Imported", offset=21, len=2, type="acc32",
                  description="Total Apparent Energy Imported",
                  notes="Total Apparent Energy Imported")
             
-   var TotVAhImp: UInt? = null
+   var TotVAhImp: Long? = null
 
    @SunSpecPoint(id="TotVAh_SF", label="", offset=23, len=1, type="sunssf",
                  description="Apparent Energy scale factor",
@@ -135,25 +135,25 @@ class Model_220 {
                  description="Total Reactive Energy Imported Quadrant 1",
                  notes="Total Reactive Energy Imported Quadrant 1")
             
-   var TotVArhImpQ1: UInt? = null
+   var TotVArhImpQ1: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ2", label="Total VAr-hours Imported Q2", offset=26, len=2, type="acc32",
                  description="Total Reactive Power Imported Quadrant 2",
                  notes="Total Reactive Power Imported Quadrant 2")
             
-   var TotVArhImpQ2: UInt? = null
+   var TotVArhImpQ2: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ3", label="Total VAr-hours Exported Q3", offset=28, len=2, type="acc32",
                  description="Total Reactive Power Exported Quadrant 3",
                  notes="Total Reactive Power Exported Quadrant 3")
             
-   var TotVArhExpQ3: UInt? = null
+   var TotVArhExpQ3: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ4", label="Total VAr-hours Exported Q4", offset=30, len=2, type="acc32",
                  description="Total Reactive Power Exported Quadrant 4",
                  notes="Total Reactive Power Exported Quadrant 4")
             
-   var TotVArhExpQ4: UInt? = null
+   var TotVArhExpQ4: Long? = null
 
    @SunSpecPoint(id="TotVArh_SF", label="", offset=32, len=1, type="sunssf",
                  description="Reactive Energy scale factor",
@@ -165,7 +165,7 @@ class Model_220 {
                  description="Meter Event Flags",
                  notes="Meter Event Flags")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
    @SunSpecPoint(id="Rsrvd", label="", offset=35, len=1, type="pad",
                  description="",
@@ -177,19 +177,19 @@ class Model_220 {
                  description="Timestamp value is the number of seconds since January 1, 2000",
                  notes="Timestamp value is the number of seconds since January 1, 2000")
             
-   var Ts: UInt? = null
+   var Ts: Int? = null
 
    @SunSpecPoint(id="Ms", label="Milliseconds", offset=38, len=1, type="uint16",
                  description="Millisecond counter 0-999",
                  notes="Millisecond counter 0-999")
             
-   var Ms: UShort? = null
+   var Ms: Int? = null
 
    @SunSpecPoint(id="Seq", label="Sequence", offset=39, len=1, type="uint16",
                  description="Sequence number of request",
                  notes="Sequence number of request")
             
-   var Seq: UShort? = null
+   var Seq: Int? = null
 
    @SunSpecPoint(id="Alg", label="Algorithm", offset=40, len=0, type="enum16",
                  description="Algorithm used to compute the digital signature",
@@ -201,6 +201,6 @@ class Model_220 {
                  description="Number of registers comprising the digital signature.",
                  notes="Number of registers comprising the digital signature.")
             
-   var N: UShort? = null
+   var N: Int? = null
 
 }

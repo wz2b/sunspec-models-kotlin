@@ -15,6 +15,6 @@ class Model_808 {
                  description="",
                  notes="")
             
-   var ModuleTBD: UShort? = null
+   var ModuleTBD: Int? = null
 
 }

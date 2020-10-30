@@ -51,13 +51,13 @@ class Model_502 {
                  description="Bitmask value.  Module Event Flags",
                  notes="Bitmask value.  Module Event Flags")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
    @SunSpecPoint(id="EvtVend", label="Vendor Module Event Flags", offset=8, len=2, type="bitfield32",
                  description="Vendor specific flags",
                  notes="Vendor specific flags")
             
-   var EvtVend: UInt? = null
+   var EvtVend: Int? = null
 
    @SunSpecPoint(id="Ctl", label="Control", offset=10, len=0, type="enum16",
                  description="Module Control",
@@ -81,7 +81,7 @@ class Model_502 {
                  description="Time in seconds since 2000 epoch",
                  notes="Time in seconds since 2000 epoch")
             
-   var Tms: UInt? = null
+   var Tms: Int? = null
 
    @SunSpecPoint(id="OutA", label="Output Current", offset=17, len=1, type="int16",
                  description="Output Current",
@@ -99,7 +99,7 @@ class Model_502 {
                  description="Output Energy",
                  notes="Output Energy")
             
-   var OutWh: UInt? = null
+   var OutWh: Long? = null
 
    @SunSpecPoint(id="OutPw", label="Output Power", offset=21, len=1, type="int16",
                  description="Output Power",
@@ -129,7 +129,7 @@ class Model_502 {
                  description="Input Energy",
                  notes="Input Energy")
             
-   var InWh: UInt? = null
+   var InWh: Long? = null
 
    @SunSpecPoint(id="InW", label="Input Power", offset=27, len=1, type="int16",
                  description="Input Power",

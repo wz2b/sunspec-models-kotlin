@@ -21,6 +21,6 @@ class Model_8 {
                  description="Number of registers to follow for the certificate",
                  notes="Number of registers to follow for the certificate")
             
-   var N: UShort? = null
+   var N: Int? = null
 
 }

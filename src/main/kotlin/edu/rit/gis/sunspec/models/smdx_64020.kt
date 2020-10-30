@@ -159,36 +159,36 @@ class Model_64020 {
                  description="frequency in Hz",
                  notes="frequency in Hz")
             
-   var Sensor8: UShort? = null
+   var Sensor8: Int? = null
 
    @SunSpecPoint(id="Relay1", label="Relay 1 state", offset=25, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Relay1: UShort? = null
+   var Relay1: Int? = null
 
    @SunSpecPoint(id="Relay2", label="Relay 2 state", offset=26, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Relay2: UShort? = null
+   var Relay2: Int? = null
 
    @SunSpecPoint(id="Relay3", label="Relay 3 state", offset=27, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Relay3: UShort? = null
+   var Relay3: Int? = null
 
    @SunSpecPoint(id="ResetAccumulators", label="Reset the accumulators", offset=28, len=1, type="uint16",
                  description="always 0 in reading, used the code 0xC0DA during the writing for resetting them",
                  notes="always 0 in reading, used the code 0xC0DA during the writing for resetting them")
             
-   var ResetAccumulators: UShort? = null
+   var ResetAccumulators: Int? = null
 
    @SunSpecPoint(id="Reset", label="Reset the system", offset=29, len=1, type="uint16",
                  description="always 0 in reading, used the code 0xC0DA during the writing for resetting the system",
                  notes="always 0 in reading, used the code 0xC0DA during the writing for resetting the system")
             
-   var Reset: UShort? = null
+   var Reset: Int? = null
 
 }

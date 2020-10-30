@@ -33,25 +33,25 @@ class Model_403 {
                  description="Maximum DC Current Rating",
                  notes="Maximum DC Current Rating")
             
-   var DCAMax: UShort? = null
+   var DCAMax: Int? = null
 
    @SunSpecPoint(id="N", label="N", offset=4, len=1, type="count",
                  description="Number of Inputs",
                  notes="Number of Inputs")
             
-   var N: UInt? = null
+   var N: Int? = null
 
    @SunSpecPoint(id="Evt", label="Event", offset=5, len=2, type="bitfield32",
                  description="Bitmask value.  Events",
                  notes="Bitmask value.  Events")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
    @SunSpecPoint(id="EvtVnd", label="Vendor Event", offset=7, len=2, type="bitfield32",
                  description="Bitmask value.  Vendor defined events",
                  notes="Bitmask value.  Vendor defined events")
             
-   var EvtVnd: UInt? = null
+   var EvtVnd: Int? = null
 
    @SunSpecPoint(id="DCA", label="Amps", offset=9, len=1, type="int16",
                  description="Total measured current",
@@ -63,7 +63,7 @@ class Model_403 {
                  description="Total metered Amp-hours",
                  notes="Total metered Amp-hours")
             
-   var DCAhr: UInt? = null
+   var DCAhr: Long? = null
 
    @SunSpecPoint(id="DCV", label="Voltage", offset=12, len=1, type="int16",
                  description="Output Voltage",

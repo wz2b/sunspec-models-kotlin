@@ -27,13 +27,13 @@ class Model_13 {
                  description="Bitmask value.  A configuration change is pending",
                  notes="Bitmask value.  A configuration change is pending")
             
-   var ChgSt: UShort? = null
+   var ChgSt: Short? = null
 
    @SunSpecPoint(id="Cap", label="Config Capability", offset=6, len=1, type="bitfield16",
                  description="Bitmask value. Identify capable sources of configuration",
                  notes="Bitmask value. Identify capable sources of configuration")
             
-   var Cap: UShort? = null
+   var Cap: Short? = null
 
    @SunSpecPoint(id="Cfg", label="IPv6 Config", offset=7, len=0, type="enum16",
                  description="Enumerated value.  Configuration method used.",

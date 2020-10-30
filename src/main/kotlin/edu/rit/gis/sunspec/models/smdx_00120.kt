@@ -21,7 +21,7 @@ class Model_120 {
                  description="Continuous power output capability of the inverter.",
                  notes="Continuous power output capability of the inverter.")
             
-   var WRtg: UShort? = null
+   var WRtg: Int? = null
 
    @SunSpecPoint(id="WRtg_SF", label="WRtg_SF", offset=2, len=1, type="sunssf",
                  description="Scale factor",
@@ -33,7 +33,7 @@ class Model_120 {
                  description="Continuous Volt-Ampere capability of the inverter.",
                  notes="Continuous Volt-Ampere capability of the inverter.")
             
-   var VARtg: UShort? = null
+   var VARtg: Int? = null
 
    @SunSpecPoint(id="VARtg_SF", label="VARtg_SF", offset=4, len=1, type="sunssf",
                  description="Scale factor",
@@ -75,7 +75,7 @@ class Model_120 {
                  description="Maximum RMS AC current level capability of the inverter.",
                  notes="Maximum RMS AC current level capability of the inverter.")
             
-   var ARtg: UShort? = null
+   var ARtg: Int? = null
 
    @SunSpecPoint(id="ARtg_SF", label="ARtg_SF", offset=11, len=1, type="sunssf",
                  description="Scale factor",
@@ -117,7 +117,7 @@ class Model_120 {
                  description="Nominal energy rating of storage device.",
                  notes="Nominal energy rating of storage device.")
             
-   var WHRtg: UShort? = null
+   var WHRtg: Int? = null
 
    @SunSpecPoint(id="WHRtg_SF", label="WHRtg_SF", offset=18, len=1, type="sunssf",
                  description="Scale factor",
@@ -129,7 +129,7 @@ class Model_120 {
                  description="The usable capacity of the battery.  Maximum charge minus minimum charge from a technology capability perspective (Amp-hour capacity rating).",
                  notes="The usable capacity of the battery.  Maximum charge minus minimum charge from a technology capability perspective (Amp-hour capacity rating).")
             
-   var AhrRtg: UShort? = null
+   var AhrRtg: Int? = null
 
    @SunSpecPoint(id="AhrRtg_SF", label="AhrRtg_SF", offset=20, len=1, type="sunssf",
                  description="Scale factor for amp-hour rating.",
@@ -141,7 +141,7 @@ class Model_120 {
                  description="Maximum rate of energy transfer into the storage device.",
                  notes="Maximum rate of energy transfer into the storage device.")
             
-   var MaxChaRte: UShort? = null
+   var MaxChaRte: Int? = null
 
    @SunSpecPoint(id="MaxChaRte_SF", label="MaxChaRte_SF", offset=22, len=1, type="sunssf",
                  description="Scale factor",
@@ -153,7 +153,7 @@ class Model_120 {
                  description="Maximum rate of energy transfer out of the storage device.",
                  notes="Maximum rate of energy transfer out of the storage device.")
             
-   var MaxDisChaRte: UShort? = null
+   var MaxDisChaRte: Int? = null
 
    @SunSpecPoint(id="MaxDisChaRte_SF", label="MaxDisChaRte_SF", offset=24, len=1, type="sunssf",
                  description="Scale factor",

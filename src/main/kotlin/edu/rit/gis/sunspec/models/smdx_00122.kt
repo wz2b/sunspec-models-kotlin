@@ -15,19 +15,19 @@ class Model_122 {
                  description="PV inverter present/available status. Enumerated value.",
                  notes="PV inverter present/available status. Enumerated value.")
             
-   var PVConn: UShort? = null
+   var PVConn: Short? = null
 
    @SunSpecPoint(id="StorConn", label="StorConn", offset=1, len=1, type="bitfield16",
                  description="Storage inverter present/available status. Enumerated value.",
                  notes="Storage inverter present/available status. Enumerated value.")
             
-   var StorConn: UShort? = null
+   var StorConn: Short? = null
 
    @SunSpecPoint(id="ECPConn", label="ECPConn", offset=2, len=1, type="bitfield16",
                  description="ECP connection status: disconnected=0  connected=1.",
                  notes="ECP connection status: disconnected=0  connected=1.")
             
-   var ECPConn: UShort? = null
+   var ECPConn: Short? = null
 
    @SunSpecPoint(id="ActWh", label="ActWh", offset=3, len=4, type="acc64",
                  description="AC lifetime active (real) energy output.",
@@ -81,7 +81,7 @@ class Model_122 {
                  description="Amount of Watts available.",
                  notes="Amount of Watts available.")
             
-   var WAval: UShort? = null
+   var WAval: Int? = null
 
    @SunSpecPoint(id="WAval_SF", label="WAval_SF", offset=30, len=1, type="sunssf",
                  description="Scale factor for available Watts.",
@@ -93,13 +93,13 @@ class Model_122 {
                  description="Bit Mask indicating setpoint limit(s) reached.",
                  notes="Bit Mask indicating setpoint limit(s) reached.")
             
-   var StSetLimMsk: UInt? = null
+   var StSetLimMsk: Int? = null
 
    @SunSpecPoint(id="StActCtl", label="StActCtl", offset=33, len=2, type="bitfield32",
                  description="Bit Mask indicating which inverter controls are currently active.",
                  notes="Bit Mask indicating which inverter controls are currently active.")
             
-   var StActCtl: UInt? = null
+   var StActCtl: Int? = null
 
    @SunSpecPoint(id="TmSrc", label="TmSrc", offset=35, len=4, type="string",
                  description="Source of time synchronization.",
@@ -111,19 +111,19 @@ class Model_122 {
                  description="Seconds since 01-01-2000 00:00 UTC",
                  notes="Seconds since 01-01-2000 00:00 UTC")
             
-   var Tms: UInt? = null
+   var Tms: Int? = null
 
    @SunSpecPoint(id="RtSt", label="RtSt", offset=41, len=1, type="bitfield16",
                  description="Bit Mask indicating active ride-through status.",
                  notes="Bit Mask indicating active ride-through status.")
             
-   var RtSt: UShort? = null
+   var RtSt: Short? = null
 
    @SunSpecPoint(id="Ris", label="Ris", offset=42, len=1, type="uint16",
                  description="Isolation resistance.",
                  notes="Isolation resistance.")
             
-   var Ris: UShort? = null
+   var Ris: Int? = null
 
    @SunSpecPoint(id="Ris_SF", label="Ris_SF", offset=43, len=1, type="sunssf",
                  description="Scale factor for isolation resistance.",

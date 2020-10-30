@@ -15,13 +15,13 @@ class Model_803 {
                  description="Number of strings in the bank.",
                  notes="Number of strings in the bank.")
             
-   var NStr: UShort? = null
+   var NStr: Int? = null
 
    @SunSpecPoint(id="NStrCon", label="Connected String Count", offset=1, len=1, type="uint16",
                  description="Number of strings with contactor closed.",
                  notes="Number of strings with contactor closed.")
             
-   var NStrCon: UShort? = null
+   var NStrCon: Int? = null
 
    @SunSpecPoint(id="ModTmpMax", label="Max Module Temperature", offset=2, len=1, type="int16",
                  description="Maximum temperature for all modules in the bank.",
@@ -33,13 +33,13 @@ class Model_803 {
                  description="String containing the module with maximum temperature.",
                  notes="String containing the module with maximum temperature.")
             
-   var ModTmpMaxStr: UShort? = null
+   var ModTmpMaxStr: Int? = null
 
    @SunSpecPoint(id="ModTmpMaxMod", label="Max Module Temperature Module", offset=4, len=1, type="uint16",
                  description="Module with maximum temperature.",
                  notes="Module with maximum temperature.")
             
-   var ModTmpMaxMod: UShort? = null
+   var ModTmpMaxMod: Int? = null
 
    @SunSpecPoint(id="ModTmpMin", label="Min Module Temperature", offset=5, len=1, type="int16",
                  description="Minimum temperature for all modules in the bank.",
@@ -51,49 +51,49 @@ class Model_803 {
                  description="String containing the module with minimum temperature.",
                  notes="String containing the module with minimum temperature.")
             
-   var ModTmpMinStr: UShort? = null
+   var ModTmpMinStr: Int? = null
 
    @SunSpecPoint(id="ModTmpMinMod", label="Min Module Temperature Module", offset=7, len=1, type="uint16",
                  description="Module with minimum temperature.",
                  notes="Module with minimum temperature.")
             
-   var ModTmpMinMod: UShort? = null
+   var ModTmpMinMod: Int? = null
 
    @SunSpecPoint(id="ModTmpAvg", label="Average Module Temperature", offset=8, len=1, type="uint16",
                  description="Average temperature for all modules in the bank.",
                  notes="Average temperature for all modules in the bank.")
             
-   var ModTmpAvg: UShort? = null
+   var ModTmpAvg: Int? = null
 
    @SunSpecPoint(id="StrVMax", label="Max String Voltage", offset=9, len=1, type="uint16",
                  description="Maximum string voltage for all strings in the bank.",
                  notes="Maximum string voltage for all strings in the bank.")
             
-   var StrVMax: UShort? = null
+   var StrVMax: Int? = null
 
    @SunSpecPoint(id="StrVMaxStr", label="Max String Voltage String", offset=10, len=1, type="uint16",
                  description="String with maximum voltage.",
                  notes="String with maximum voltage.")
             
-   var StrVMaxStr: UShort? = null
+   var StrVMaxStr: Int? = null
 
    @SunSpecPoint(id="StrVMin", label="Min String Voltage", offset=11, len=1, type="uint16",
                  description="Minimum string voltage for all strings in the bank.",
                  notes="Minimum string voltage for all strings in the bank.")
             
-   var StrVMin: UShort? = null
+   var StrVMin: Int? = null
 
    @SunSpecPoint(id="StrVMinStr", label="Min String Voltage String", offset=12, len=1, type="uint16",
                  description="String with minimum voltage.",
                  notes="String with minimum voltage.")
             
-   var StrVMinStr: UShort? = null
+   var StrVMinStr: Int? = null
 
    @SunSpecPoint(id="StrVAvg", label="Average String Voltage", offset=13, len=1, type="uint16",
                  description="Average string voltage for all strings in the bank.",
                  notes="Average string voltage for all strings in the bank.")
             
-   var StrVAvg: UShort? = null
+   var StrVAvg: Int? = null
 
    @SunSpecPoint(id="StrAMax", label="Max String Current", offset=14, len=1, type="int16",
                  description="Maximum current of any string in the bank.",
@@ -105,7 +105,7 @@ class Model_803 {
                  description="String with the maximum current.",
                  notes="String with the maximum current.")
             
-   var StrAMaxStr: UShort? = null
+   var StrAMaxStr: Int? = null
 
    @SunSpecPoint(id="StrAMin", label="Min String Current", offset=16, len=1, type="int16",
                  description="Minimum current of any string in the bank.",
@@ -117,7 +117,7 @@ class Model_803 {
                  description="String with the minimum current.",
                  notes="String with the minimum current.")
             
-   var StrAMinStr: UShort? = null
+   var StrAMinStr: Int? = null
 
    @SunSpecPoint(id="StrAAvg", label="Average String Current", offset=18, len=1, type="int16",
                  description="Average string current for all strings in the bank.",
@@ -129,7 +129,7 @@ class Model_803 {
                  description="Total number of cells that are currently being balanced.",
                  notes="Total number of cells that are currently being balanced.")
             
-   var NCellBal: UShort? = null
+   var NCellBal: Int? = null
 
    @SunSpecPoint(id="CellV_SF", label="", offset=20, len=1, type="sunssf",
                  description="Scale factor for cell voltage.",

@@ -15,79 +15,79 @@ class Model_805 {
                  description="Index of the string containing the module.",
                  notes="Index of the string containing the module.")
             
-   var StrIdx: UShort? = null
+   var StrIdx: Int? = null
 
    @SunSpecPoint(id="ModIdx", label="Module Index", offset=1, len=1, type="uint16",
                  description="Index of the module within the string.",
                  notes="Index of the module within the string.")
             
-   var ModIdx: UShort? = null
+   var ModIdx: Int? = null
 
    @SunSpecPoint(id="NCell", label="Module Cell Count", offset=2, len=1, type="uint16",
                  description="Count of all cells in the module.",
                  notes="Count of all cells in the module.")
             
-   var NCell: UShort? = null
+   var NCell: Int? = null
 
    @SunSpecPoint(id="SoC", label="Module SoC", offset=3, len=1, type="uint16",
                  description="Module state of charge, expressed as a percentage.",
                  notes="Module state of charge, expressed as a percentage.")
             
-   var SoC: UShort? = null
+   var SoC: Int? = null
 
    @SunSpecPoint(id="DoD", label="Depth of Discharge", offset=4, len=1, type="uint16",
                  description="Depth of discharge for the module.",
                  notes="Depth of discharge for the module.")
             
-   var DoD: UShort? = null
+   var DoD: Int? = null
 
    @SunSpecPoint(id="SoH", label="Module SoH", offset=5, len=1, type="uint16",
                  description="Module state of health, expressed as a percentage.",
                  notes="Module state of health, expressed as a percentage.")
             
-   var SoH: UShort? = null
+   var SoH: Int? = null
 
    @SunSpecPoint(id="NCyc", label="Cycle Count", offset=6, len=2, type="uint32",
                  description="Count of cycles executed.",
                  notes="Count of cycles executed.")
             
-   var NCyc: UInt? = null
+   var NCyc: Int? = null
 
    @SunSpecPoint(id="V", label="Module Voltage", offset=8, len=1, type="uint16",
                  description="Voltage of the module.",
                  notes="Voltage of the module.")
             
-   var V: UShort? = null
+   var V: Int? = null
 
    @SunSpecPoint(id="CellVMax", label="Max Cell Voltage", offset=9, len=1, type="uint16",
                  description="Maximum voltage for all cells in the module.",
                  notes="Maximum voltage for all cells in the module.")
             
-   var CellVMax: UShort? = null
+   var CellVMax: Int? = null
 
    @SunSpecPoint(id="CellVMaxCell", label="Max Cell Voltage Cell", offset=10, len=1, type="uint16",
                  description="Cell with the maximum voltage.",
                  notes="Cell with the maximum voltage.")
             
-   var CellVMaxCell: UShort? = null
+   var CellVMaxCell: Int? = null
 
    @SunSpecPoint(id="CellVMin", label="Min Cell Voltage", offset=11, len=1, type="uint16",
                  description="Minimum voltage for all cells in the module.",
                  notes="Minimum voltage for all cells in the module.")
             
-   var CellVMin: UShort? = null
+   var CellVMin: Int? = null
 
    @SunSpecPoint(id="CellVMinCell", label="Min Cell Voltage Cell", offset=12, len=1, type="uint16",
                  description="Cell with the minimum voltage.",
                  notes="Cell with the minimum voltage.")
             
-   var CellVMinCell: UShort? = null
+   var CellVMinCell: Int? = null
 
    @SunSpecPoint(id="CellVAvg", label="Average Cell Voltage", offset=13, len=1, type="uint16",
                  description="Average voltage for all cells in the module.",
                  notes="Average voltage for all cells in the module.")
             
-   var CellVAvg: UShort? = null
+   var CellVAvg: Int? = null
 
    @SunSpecPoint(id="CellTmpMax", label="Max Cell Temperature", offset=14, len=1, type="int16",
                  description="Maximum temperature for all cells in the module.",
@@ -99,7 +99,7 @@ class Model_805 {
                  description="Cell with the maximum cell temperature.",
                  notes="Cell with the maximum cell temperature.")
             
-   var CellTmpMaxCell: UShort? = null
+   var CellTmpMaxCell: Int? = null
 
    @SunSpecPoint(id="CellTmpMin", label="Min Cell Temperature", offset=16, len=1, type="int16",
                  description="Minimum temperature for all cells in the module.",
@@ -111,7 +111,7 @@ class Model_805 {
                  description="Cell with the minimum cell temperature.",
                  notes="Cell with the minimum cell temperature.")
             
-   var CellTmpMinCell: UShort? = null
+   var CellTmpMinCell: Int? = null
 
    @SunSpecPoint(id="CellTmpAvg", label="Average Cell Temperature", offset=18, len=1, type="int16",
                  description="Average temperature for all cells in the module.",
@@ -123,7 +123,7 @@ class Model_805 {
                  description="Number of cells currently being balanced in the module.",
                  notes="Number of cells currently being balanced in the module.")
             
-   var NCellBal: UShort? = null
+   var NCellBal: Int? = null
 
    @SunSpecPoint(id="SN", label="Serial Number", offset=20, len=16, type="string",
                  description="Serial number for the module.",

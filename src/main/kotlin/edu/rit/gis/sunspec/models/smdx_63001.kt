@@ -75,49 +75,49 @@ class Model_63001 {
                  description="",
                  notes="")
             
-   var uint16_1: UShort? = null
+   var uint16_1: Int? = null
 
    @SunSpecPoint(id="uint16_2", label="", offset=11, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var uint16_2: UShort? = null
+   var uint16_2: Int? = null
 
    @SunSpecPoint(id="uint16_3", label="", offset=12, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var uint16_3: UShort? = null
+   var uint16_3: Int? = null
 
    @SunSpecPoint(id="uint16_4", label="", offset=13, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var uint16_4: UShort? = null
+   var uint16_4: Int? = null
 
    @SunSpecPoint(id="uint16_5", label="", offset=14, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var uint16_5: UShort? = null
+   var uint16_5: Int? = null
 
    @SunSpecPoint(id="uint16_u", label="", offset=15, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var uint16_u: UShort? = null
+   var uint16_u: Int? = null
 
    @SunSpecPoint(id="acc16", label="", offset=16, len=1, type="acc16",
                  description="",
                  notes="")
             
-   var acc16: UShort? = null
+   var acc16: Int? = null
 
    @SunSpecPoint(id="acc16_u", label="", offset=17, len=1, type="acc16",
                  description="",
                  notes="")
             
-   var acc16_u: UShort? = null
+   var acc16_u: Int? = null
 
    @SunSpecPoint(id="enum16", label="", offset=18, len=0, type="enum16",
                  description="",
@@ -135,13 +135,13 @@ class Model_63001 {
                  description="",
                  notes="")
             
-   var bitfield16: UShort? = null
+   var bitfield16: Short? = null
 
    @SunSpecPoint(id="bitfield16_u", label="", offset=21, len=1, type="bitfield16",
                  description="",
                  notes="")
             
-   var bitfield16_u: UShort? = null
+   var bitfield16_u: Short? = null
 
    @SunSpecPoint(id="int32_1", label="", offset=22, len=2, type="int32",
                  description="",
@@ -183,49 +183,49 @@ class Model_63001 {
                  description="",
                  notes="")
             
-   var uint32_1: UInt? = null
+   var uint32_1: Int? = null
 
    @SunSpecPoint(id="uint32_2", label="", offset=36, len=2, type="uint32",
                  description="",
                  notes="")
             
-   var uint32_2: UInt? = null
+   var uint32_2: Int? = null
 
    @SunSpecPoint(id="uint32_3", label="", offset=38, len=2, type="uint32",
                  description="",
                  notes="")
             
-   var uint32_3: UInt? = null
+   var uint32_3: Int? = null
 
    @SunSpecPoint(id="uint32_4", label="", offset=40, len=2, type="uint32",
                  description="",
                  notes="")
             
-   var uint32_4: UInt? = null
+   var uint32_4: Int? = null
 
    @SunSpecPoint(id="uint32_5", label="", offset=42, len=2, type="uint32",
                  description="",
                  notes="")
             
-   var uint32_5: UInt? = null
+   var uint32_5: Int? = null
 
    @SunSpecPoint(id="uint32_u", label="", offset=44, len=2, type="uint32",
                  description="",
                  notes="")
             
-   var uint32_u: UInt? = null
+   var uint32_u: Int? = null
 
    @SunSpecPoint(id="acc32", label="", offset=46, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var acc32: UInt? = null
+   var acc32: Long? = null
 
    @SunSpecPoint(id="acc32_u", label="", offset=48, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var acc32_u: UInt? = null
+   var acc32_u: Long? = null
 
    @SunSpecPoint(id="enum32", label="", offset=50, len=0, type="enum32",
                  description="",
@@ -243,13 +243,13 @@ class Model_63001 {
                  description="",
                  notes="")
             
-   var bitfield32: UInt? = null
+   var bitfield32: Int? = null
 
    @SunSpecPoint(id="bitfield32_u", label="", offset=56, len=2, type="bitfield32",
                  description="",
                  notes="")
             
-   var bitfield32_u: UInt? = null
+   var bitfield32_u: Int? = null
 
    @SunSpecPoint(id="ipaddr", label="", offset=58, len=2, type="ipaddr",
                  description="",

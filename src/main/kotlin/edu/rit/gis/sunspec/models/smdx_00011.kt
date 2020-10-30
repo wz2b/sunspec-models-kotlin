@@ -15,13 +15,13 @@ class Model_11 {
                  description="Interface speed in Mb/s",
                  notes="Interface speed in Mb/s")
             
-   var Spd: UShort? = null
+   var Spd: Int? = null
 
    @SunSpecPoint(id="CfgSt", label="Interface Status Flags", offset=1, len=1, type="bitfield16",
                  description="Bitmask values Interface flags.",
                  notes="Bitmask values Interface flags.")
             
-   var CfgSt: UShort? = null
+   var CfgSt: Short? = null
 
    @SunSpecPoint(id="St", label="Link State", offset=2, len=0, type="enum16",
                  description="Enumerated value. State information for this interface",
@@ -45,12 +45,12 @@ class Model_11 {
                  description="Control flags",
                  notes="Control flags")
             
-   var Ctl: UShort? = null
+   var Ctl: Short? = null
 
    @SunSpecPoint(id="FrcSpd", label="Forced Speed", offset=12, len=1, type="uint16",
                  description="Forced interface speed in Mb/s when AUTO is disabled",
                  notes="Forced interface speed in Mb/s when AUTO is disabled")
             
-   var FrcSpd: UShort? = null
+   var FrcSpd: Int? = null
 
 }

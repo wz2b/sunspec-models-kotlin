@@ -21,7 +21,7 @@ class Model_10 {
                  description="Overall interface control (TBD)",
                  notes="Overall interface control (TBD)")
             
-   var Ctl: UShort? = null
+   var Ctl: Int? = null
 
    @SunSpecPoint(id="Typ", label="Physical Access Type", offset=2, len=0, type="enum16",
                  description="Enumerated value.  Type of physical media",

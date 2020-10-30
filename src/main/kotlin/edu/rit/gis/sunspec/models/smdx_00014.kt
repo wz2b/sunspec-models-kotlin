@@ -21,7 +21,7 @@ class Model_14 {
                  description="Bitmask value.  Proxy configuration capabilities",
                  notes="Bitmask value.  Proxy configuration capabilities")
             
-   var Cap: UShort? = null
+   var Cap: Short? = null
 
    @SunSpecPoint(id="Cfg", label="Config", offset=5, len=0, type="enum16",
                  description="Enumerated value.  Set proxy address type",
@@ -33,7 +33,7 @@ class Model_14 {
                  description="Enumerate value.  Proxy server type",
                  notes="Enumerate value.  Proxy server type")
             
-   var Typ: UShort? = null
+   var Typ: Short? = null
 
    @SunSpecPoint(id="Addr", label="Address", offset=7, len=20, type="string",
                  description="IPv4 or IPv6 proxy hostname or dotted address (40 chars)",
@@ -45,7 +45,7 @@ class Model_14 {
                  description="Proxy port number",
                  notes="Proxy port number")
             
-   var Port: UShort? = null
+   var Port: Int? = null
 
    @SunSpecPoint(id="User", label="Username", offset=28, len=12, type="string",
                  description="Proxy user name",

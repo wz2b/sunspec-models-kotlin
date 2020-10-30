@@ -381,6 +381,6 @@ class Model_212 {
                  description="Meter Event Flags",
                  notes="Meter Event Flags")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
 }

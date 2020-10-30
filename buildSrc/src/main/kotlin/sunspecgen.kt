@@ -107,35 +107,39 @@ class SunSpecKotlinEmitter {
 
         /* Try to find a label for this field */
         val pointLabel =
-            xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/label", doc, XPathConstants.STRING) ?: id
+            xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/label", doc, XPathConstants.STRING) as String? ?: id
         val pointDescription =
-            xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/description", doc, XPathConstants.STRING)
+            xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/description", doc, XPathConstants.STRING) as String?
                 ?: pointLabel
         val pointNotes =
             xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/description", doc, XPathConstants.STRING) as String?
 
         builder.append(
             """   @SunSpecPoint(id="$id", label="$pointLabel", offset=$offset, len=$len, type="$type",
-                 description="$pointDescription",
-                 notes="$pointNotes")
+                 description="${pointDescription?.replace('\"', '\'')}",
+                 notes="${pointNotes?.replace('\"', '\'')}")
             """
         ).trimToSize()
 
+        /*
+         * Many of these should actually be unsigned but because Kotlin's UShort, etc. classes
+         * are inline that breaks reflection, so use Ints here for those
+         */
         val kt = when (type) {
             "int16" -> Short::class
-            "uint16" -> UShort::class
-            "count" -> UInt::class
-            "acc16" -> UShort::class
+            "uint16" -> Int::class
+            "count" -> Int::class
+            "acc16" -> Int::class
             "string" -> String::class
             "int32" -> Int::class
-            "uint32" -> UInt::class
+            "uint32" -> Int::class
             "float32" -> Float::class
-            "acc32" -> UInt::class
+            "acc32" -> Long::class
             "int64" -> Long::class
-            "uint64" -> ULong::class
+            "uint64" -> Long::class
             "float64" -> Double::class
-            "bitfield16" -> UShort::class
-            "bitfield32" -> UInt::class
+            "bitfield16" -> Short::class
+            "bitfield32" -> Int::class
             "sunssf" -> Any::class
             "pad" -> Any::class
             "ipaddr" -> String::class

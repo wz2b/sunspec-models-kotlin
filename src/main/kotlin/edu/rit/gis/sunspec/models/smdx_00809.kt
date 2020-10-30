@@ -15,6 +15,6 @@ class Model_809 {
                  description="",
                  notes="")
             
-   var StackTBD: UShort? = null
+   var StackTBD: Int? = null
 
 }

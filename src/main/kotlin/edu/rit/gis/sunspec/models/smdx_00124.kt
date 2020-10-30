@@ -15,55 +15,55 @@ class Model_124 {
                  description="Setpoint for maximum charge.",
                  notes="Setpoint for maximum charge.")
             
-   var WChaMax: UShort? = null
+   var WChaMax: Int? = null
 
    @SunSpecPoint(id="WChaGra", label="WChaGra", offset=1, len=1, type="uint16",
                  description="Setpoint for maximum charging rate. Default is MaxChaRte.",
                  notes="Setpoint for maximum charging rate. Default is MaxChaRte.")
             
-   var WChaGra: UShort? = null
+   var WChaGra: Int? = null
 
    @SunSpecPoint(id="WDisChaGra", label="WDisChaGra", offset=2, len=1, type="uint16",
                  description="Setpoint for maximum discharge rate. Default is MaxDisChaRte.",
                  notes="Setpoint for maximum discharge rate. Default is MaxDisChaRte.")
             
-   var WDisChaGra: UShort? = null
+   var WDisChaGra: Int? = null
 
    @SunSpecPoint(id="StorCtl_Mod", label="StorCtl_Mod", offset=3, len=1, type="bitfield16",
                  description="Activate hold/discharge/charge storage control mode. Bitfield value.",
                  notes="Activate hold/discharge/charge storage control mode. Bitfield value.")
             
-   var StorCtl_Mod: UShort? = null
+   var StorCtl_Mod: Short? = null
 
    @SunSpecPoint(id="VAChaMax", label="VAChaMax", offset=4, len=1, type="uint16",
                  description="Setpoint for maximum charging VA.",
                  notes="Setpoint for maximum charging VA.")
             
-   var VAChaMax: UShort? = null
+   var VAChaMax: Int? = null
 
    @SunSpecPoint(id="MinRsvPct", label="MinRsvPct", offset=5, len=1, type="uint16",
                  description="Setpoint for minimum reserve for storage as a percentage of the nominal maximum storage.",
                  notes="Setpoint for minimum reserve for storage as a percentage of the nominal maximum storage.")
             
-   var MinRsvPct: UShort? = null
+   var MinRsvPct: Int? = null
 
    @SunSpecPoint(id="ChaState", label="ChaState", offset=6, len=1, type="uint16",
                  description="Currently available energy as a percent of the capacity rating.",
                  notes="Currently available energy as a percent of the capacity rating.")
             
-   var ChaState: UShort? = null
+   var ChaState: Int? = null
 
    @SunSpecPoint(id="StorAval", label="StorAval", offset=7, len=1, type="uint16",
                  description="State of charge (ChaState) minus storage reserve (MinRsvPct) times capacity rating (AhrRtg).",
                  notes="State of charge (ChaState) minus storage reserve (MinRsvPct) times capacity rating (AhrRtg).")
             
-   var StorAval: UShort? = null
+   var StorAval: Int? = null
 
    @SunSpecPoint(id="InBatV", label="InBatV", offset=8, len=1, type="uint16",
                  description="Internal battery voltage.",
                  notes="Internal battery voltage.")
             
-   var InBatV: UShort? = null
+   var InBatV: Int? = null
 
    @SunSpecPoint(id="ChaSt", label="ChaSt", offset=9, len=1, type="enum16",
                  description="Charge status of storage device. Enumerated value.",
@@ -87,19 +87,19 @@ class Model_124 {
                  description="Time window for charge/discharge rate change.",
                  notes="Time window for charge/discharge rate change.")
             
-   var InOutWRte_WinTms: UShort? = null
+   var InOutWRte_WinTms: Int? = null
 
    @SunSpecPoint(id="InOutWRte_RvrtTms", label="InOutWRte_RvrtTms", offset=13, len=1, type="uint16",
                  description="Timeout period for charge/discharge rate.",
                  notes="Timeout period for charge/discharge rate.")
             
-   var InOutWRte_RvrtTms: UShort? = null
+   var InOutWRte_RvrtTms: Int? = null
 
    @SunSpecPoint(id="InOutWRte_RmpTms", label="InOutWRte_RmpTms", offset=14, len=1, type="uint16",
                  description="Ramp time for moving from current setpoint to new setpoint.",
                  notes="Ramp time for moving from current setpoint to new setpoint.")
             
-   var InOutWRte_RmpTms: UShort? = null
+   var InOutWRte_RmpTms: Int? = null
 
    @SunSpecPoint(id="ChaGriSet", label="", offset=15, len=1, type="enum16",
                  description="",

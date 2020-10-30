@@ -21,19 +21,19 @@ class Model_64001 {
                  description="",
                  notes="")
             
-   var HWRev: UShort? = null
+   var HWRev: Int? = null
 
    @SunSpecPoint(id="RSFWRev", label="RS FW Revision", offset=2, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var RSFWRev: UShort? = null
+   var RSFWRev: Int? = null
 
    @SunSpecPoint(id="OSFWRev", label="OS FW Revision", offset=3, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var OSFWRev: UShort? = null
+   var OSFWRev: Int? = null
 
    @SunSpecPoint(id="ProdRev", label="Product Revision", offset=4, len=2, type="string",
                  description="",
@@ -45,55 +45,55 @@ class Model_64001 {
                  description="",
                  notes="")
             
-   var Boots: UShort? = null
+   var Boots: Int? = null
 
    @SunSpecPoint(id="Switch", label="DIP Switches", offset=7, len=1, type="bitfield16",
                  description="",
                  notes="")
             
-   var Switch: UShort? = null
+   var Switch: Short? = null
 
    @SunSpecPoint(id="Sensors", label="Num Detected Sensors", offset=8, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Sensors: UShort? = null
+   var Sensors: Int? = null
 
    @SunSpecPoint(id="Talking", label="Num Communicating Sensors", offset=9, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Talking: UShort? = null
+   var Talking: Int? = null
 
    @SunSpecPoint(id="Status", label="System Status", offset=10, len=1, type="bitfield16",
                  description="",
                  notes="")
             
-   var Status: UShort? = null
+   var Status: Short? = null
 
    @SunSpecPoint(id="Config", label="System Configuration", offset=11, len=1, type="bitfield16",
                  description="",
                  notes="")
             
-   var Config: UShort? = null
+   var Config: Short? = null
 
    @SunSpecPoint(id="LEDblink", label="LED Blink Threshold", offset=12, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var LEDblink: UShort? = null
+   var LEDblink: Int? = null
 
    @SunSpecPoint(id="LEDon", label="LED On Threshold", offset=13, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var LEDon: UShort? = null
+   var LEDon: Int? = null
 
    @SunSpecPoint(id="Reserved", label="", offset=14, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Reserved: UShort? = null
+   var Reserved: Int? = null
 
    @SunSpecPoint(id="Loc", label="Location String", offset=15, len=16, type="string",
                  description="",
@@ -111,13 +111,13 @@ class Model_64001 {
                  description="",
                  notes="")
             
-   var S1Addr: UShort? = null
+   var S1Addr: Int? = null
 
    @SunSpecPoint(id="S1OSVer", label="Sensor 1 OS Version", offset=33, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var S1OSVer: UShort? = null
+   var S1OSVer: Int? = null
 
    @SunSpecPoint(id="S1Ver", label="Sensor 1 Product Version", offset=34, len=2, type="string",
                  description="",
@@ -141,13 +141,13 @@ class Model_64001 {
                  description="",
                  notes="")
             
-   var S2Addr: UShort? = null
+   var S2Addr: Int? = null
 
    @SunSpecPoint(id="S2OSVer", label="Sensor 2 OS Version", offset=43, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var S2OSVer: UShort? = null
+   var S2OSVer: Int? = null
 
    @SunSpecPoint(id="S2Ver", label="Sensor 2 Product Version", offset=44, len=2, type="string",
                  description="",
@@ -171,13 +171,13 @@ class Model_64001 {
                  description="",
                  notes="")
             
-   var S3Addr: UShort? = null
+   var S3Addr: Int? = null
 
    @SunSpecPoint(id="S3OSVer", label="Sensor 3 OS Version", offset=53, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var S3OSVer: UShort? = null
+   var S3OSVer: Int? = null
 
    @SunSpecPoint(id="S3Ver", label="Sensor 3 Product Version", offset=54, len=2, type="string",
                  description="",
@@ -201,13 +201,13 @@ class Model_64001 {
                  description="",
                  notes="")
             
-   var S4Addr: UShort? = null
+   var S4Addr: Int? = null
 
    @SunSpecPoint(id="S4OSVer", label="Sensor 4 OS Version", offset=63, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var S4OSVer: UShort? = null
+   var S4OSVer: Int? = null
 
    @SunSpecPoint(id="S4Ver", label="Sensor 4 Product Version", offset=64, len=2, type="string",
                  description="",

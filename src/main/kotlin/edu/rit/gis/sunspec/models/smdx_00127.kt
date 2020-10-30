@@ -15,7 +15,7 @@ class Model_127 {
                  description="The slope of the reduction in the maximum allowed watts output as a function of frequency.",
                  notes="The slope of the reduction in the maximum allowed watts output as a function of frequency.")
             
-   var WGra: UShort? = null
+   var WGra: Int? = null
 
    @SunSpecPoint(id="HzStr", label="HzStr", offset=1, len=1, type="int16",
                  description="The frequency deviation from nominal frequency (ECPNomHz) at which a snapshot of the instantaneous power output is taken to act as the CAPPED power level (PM) and above which reduction in power output occurs.",
@@ -33,19 +33,19 @@ class Model_127 {
                  description="Enable hysteresis",
                  notes="Enable hysteresis")
             
-   var HysEna: UShort? = null
+   var HysEna: Short? = null
 
    @SunSpecPoint(id="ModEna", label="ModEna", offset=4, len=1, type="bitfield16",
                  description="Is Parameterized Frequency-Watt control active.",
                  notes="Is Parameterized Frequency-Watt control active.")
             
-   var ModEna: UShort? = null
+   var ModEna: Short? = null
 
    @SunSpecPoint(id="HzStopWGra", label="HzStopWGra", offset=5, len=1, type="uint16",
                  description="The maximum time-based rate of change at which power output returns to normal after having been capped by an over frequency event.",
                  notes="The maximum time-based rate of change at which power output returns to normal after having been capped by an over frequency event.")
             
-   var HzStopWGra: UShort? = null
+   var HzStopWGra: Int? = null
 
    @SunSpecPoint(id="WGra_SF", label="WGra_SF", offset=6, len=1, type="sunssf",
                  description="Scale factor for output gradient.",

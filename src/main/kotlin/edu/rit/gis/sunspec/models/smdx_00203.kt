@@ -231,49 +231,49 @@ class Model_203 {
                  description="Total Real Energy Exported",
                  notes="Total Real Energy Exported")
             
-   var TotWhExp: UInt? = null
+   var TotWhExp: Long? = null
 
    @SunSpecPoint(id="TotWhExpPhA", label="Total Watt-hours Exported phase A", offset=38, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotWhExpPhA: UInt? = null
+   var TotWhExpPhA: Long? = null
 
    @SunSpecPoint(id="TotWhExpPhB", label="Total Watt-hours Exported phase B", offset=40, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotWhExpPhB: UInt? = null
+   var TotWhExpPhB: Long? = null
 
    @SunSpecPoint(id="TotWhExpPhC", label="Total Watt-hours Exported phase C", offset=42, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotWhExpPhC: UInt? = null
+   var TotWhExpPhC: Long? = null
 
    @SunSpecPoint(id="TotWhImp", label="Total Watt-hours Imported", offset=44, len=2, type="acc32",
                  description="Total Real Energy Imported",
                  notes="Total Real Energy Imported")
             
-   var TotWhImp: UInt? = null
+   var TotWhImp: Long? = null
 
    @SunSpecPoint(id="TotWhImpPhA", label="Total Watt-hours Imported phase A", offset=46, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotWhImpPhA: UInt? = null
+   var TotWhImpPhA: Long? = null
 
    @SunSpecPoint(id="TotWhImpPhB", label="Total Watt-hours Imported phase B", offset=48, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotWhImpPhB: UInt? = null
+   var TotWhImpPhB: Long? = null
 
    @SunSpecPoint(id="TotWhImpPhC", label="Total Watt-hours Imported phase C", offset=50, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotWhImpPhC: UInt? = null
+   var TotWhImpPhC: Long? = null
 
    @SunSpecPoint(id="TotWh_SF", label="", offset=52, len=1, type="sunssf",
                  description="Real Energy scale factor",
@@ -285,49 +285,49 @@ class Model_203 {
                  description="Total Apparent Energy Exported",
                  notes="Total Apparent Energy Exported")
             
-   var TotVAhExp: UInt? = null
+   var TotVAhExp: Long? = null
 
    @SunSpecPoint(id="TotVAhExpPhA", label="Total VA-hours Exported phase A", offset=55, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVAhExpPhA: UInt? = null
+   var TotVAhExpPhA: Long? = null
 
    @SunSpecPoint(id="TotVAhExpPhB", label="Total VA-hours Exported phase B", offset=57, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVAhExpPhB: UInt? = null
+   var TotVAhExpPhB: Long? = null
 
    @SunSpecPoint(id="TotVAhExpPhC", label="Total VA-hours Exported phase C", offset=59, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVAhExpPhC: UInt? = null
+   var TotVAhExpPhC: Long? = null
 
    @SunSpecPoint(id="TotVAhImp", label="Total VA-hours Imported", offset=61, len=2, type="acc32",
                  description="Total Apparent Energy Imported",
                  notes="Total Apparent Energy Imported")
             
-   var TotVAhImp: UInt? = null
+   var TotVAhImp: Long? = null
 
    @SunSpecPoint(id="TotVAhImpPhA", label="Total VA-hours Imported phase A", offset=63, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVAhImpPhA: UInt? = null
+   var TotVAhImpPhA: Long? = null
 
    @SunSpecPoint(id="TotVAhImpPhB", label="Total VA-hours Imported phase B", offset=65, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVAhImpPhB: UInt? = null
+   var TotVAhImpPhB: Long? = null
 
    @SunSpecPoint(id="TotVAhImpPhC", label="Total VA-hours Imported phase C", offset=67, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVAhImpPhC: UInt? = null
+   var TotVAhImpPhC: Long? = null
 
    @SunSpecPoint(id="TotVAh_SF", label="", offset=69, len=1, type="sunssf",
                  description="Apparent Energy scale factor",
@@ -339,97 +339,97 @@ class Model_203 {
                  description="Total Reactive Energy Imported Quadrant 1",
                  notes="Total Reactive Energy Imported Quadrant 1")
             
-   var TotVArhImpQ1: UInt? = null
+   var TotVArhImpQ1: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ1PhA", label="Total VAr-hours Imported Q1 phase A", offset=72, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhImpQ1PhA: UInt? = null
+   var TotVArhImpQ1PhA: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ1PhB", label="Total VAr-hours Imported Q1 phase B", offset=74, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhImpQ1PhB: UInt? = null
+   var TotVArhImpQ1PhB: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ1PhC", label="Total VAr-hours Imported Q1 phase C", offset=76, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhImpQ1PhC: UInt? = null
+   var TotVArhImpQ1PhC: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ2", label="Total VAr-hours Imported Q2", offset=78, len=2, type="acc32",
                  description="Total Reactive Power Imported Quadrant 2",
                  notes="Total Reactive Power Imported Quadrant 2")
             
-   var TotVArhImpQ2: UInt? = null
+   var TotVArhImpQ2: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ2PhA", label="Total VAr-hours Imported Q2 phase A", offset=80, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhImpQ2PhA: UInt? = null
+   var TotVArhImpQ2PhA: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ2PhB", label="Total VAr-hours Imported Q2 phase B", offset=82, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhImpQ2PhB: UInt? = null
+   var TotVArhImpQ2PhB: Long? = null
 
    @SunSpecPoint(id="TotVArhImpQ2PhC", label="Total VAr-hours Imported Q2 phase C", offset=84, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhImpQ2PhC: UInt? = null
+   var TotVArhImpQ2PhC: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ3", label="Total VAr-hours Exported Q3", offset=86, len=2, type="acc32",
                  description="Total Reactive Power Exported Quadrant 3",
                  notes="Total Reactive Power Exported Quadrant 3")
             
-   var TotVArhExpQ3: UInt? = null
+   var TotVArhExpQ3: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ3PhA", label="Total VAr-hours Exported Q3 phase A", offset=88, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhExpQ3PhA: UInt? = null
+   var TotVArhExpQ3PhA: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ3PhB", label="Total VAr-hours Exported Q3 phase B", offset=90, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhExpQ3PhB: UInt? = null
+   var TotVArhExpQ3PhB: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ3PhC", label="Total VAr-hours Exported Q3 phase C", offset=92, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhExpQ3PhC: UInt? = null
+   var TotVArhExpQ3PhC: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ4", label="Total VAr-hours Exported Q4", offset=94, len=2, type="acc32",
                  description="Total Reactive Power Exported Quadrant 4",
                  notes="Total Reactive Power Exported Quadrant 4")
             
-   var TotVArhExpQ4: UInt? = null
+   var TotVArhExpQ4: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ4PhA", label="Total VAr-hours Exported Q4 Imported phase A", offset=96, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhExpQ4PhA: UInt? = null
+   var TotVArhExpQ4PhA: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ4PhB", label="Total VAr-hours Exported Q4 Imported phase B", offset=98, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhExpQ4PhB: UInt? = null
+   var TotVArhExpQ4PhB: Long? = null
 
    @SunSpecPoint(id="TotVArhExpQ4PhC", label="Total VAr-hours Exported Q4 Imported phase C", offset=100, len=2, type="acc32",
                  description="",
                  notes="")
             
-   var TotVArhExpQ4PhC: UInt? = null
+   var TotVArhExpQ4PhC: Long? = null
 
    @SunSpecPoint(id="TotVArh_SF", label="", offset=102, len=1, type="sunssf",
                  description="Reactive Energy scale factor",
@@ -441,6 +441,6 @@ class Model_203 {
                  description="Meter Event Flags",
                  notes="Meter Event Flags")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
 }

@@ -15,19 +15,19 @@ class Model_2 {
                  description="Aggregated model id",
                  notes="Aggregated model id")
             
-   var AID: UShort? = null
+   var AID: Int? = null
 
    @SunSpecPoint(id="N", label="N", offset=1, len=1, type="uint16",
                  description="Number of aggregated models",
                  notes="Number of aggregated models")
             
-   var N: UShort? = null
+   var N: Int? = null
 
    @SunSpecPoint(id="UN", label="UN", offset=2, len=1, type="uint16",
                  description="Update Number.  Incrementing number each time the mapping is changed.  If the number is not changed from the last reading the direct access to a specific offset will result in reading the same logical model as before.  Otherwise the entire model must be read to refresh the changes",
                  notes="Update Number.  Incrementing number each time the mapping is changed.  If the number is not changed from the last reading the direct access to a specific offset will result in reading the same logical model as before.  Otherwise the entire model must be read to refresh the changes")
             
-   var UN: UShort? = null
+   var UN: Int? = null
 
    @SunSpecPoint(id="St", label="Status", offset=3, len=0, type="enum16",
                  description="Enumerated status code",
@@ -45,13 +45,13 @@ class Model_2 {
                  description="Bitmask event code",
                  notes="Bitmask event code")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
    @SunSpecPoint(id="EvtVnd", label="Vendor Event Code", offset=7, len=2, type="bitfield32",
                  description="Vendor specific event code",
                  notes="Vendor specific event code")
             
-   var EvtVnd: UInt? = null
+   var EvtVnd: Int? = null
 
    @SunSpecPoint(id="Ctl", label="Control", offset=9, len=0, type="enum16",
                  description="Control register for all aggregated devices",

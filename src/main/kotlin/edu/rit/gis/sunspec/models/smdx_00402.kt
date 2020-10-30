@@ -45,25 +45,25 @@ class Model_402 {
                  description="Maximum DC Current Rating",
                  notes="Maximum DC Current Rating")
             
-   var DCAMax: UShort? = null
+   var DCAMax: Int? = null
 
    @SunSpecPoint(id="N", label="N", offset=6, len=1, type="count",
                  description="Number of Inputs",
                  notes="Number of Inputs")
             
-   var N: UInt? = null
+   var N: Int? = null
 
    @SunSpecPoint(id="Evt", label="Event", offset=7, len=2, type="bitfield32",
                  description="Bitmask value.  Events",
                  notes="Bitmask value.  Events")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
    @SunSpecPoint(id="EvtVnd", label="Vendor Event", offset=9, len=2, type="bitfield32",
                  description="Bitmask value.  Vendor defined events",
                  notes="Bitmask value.  Vendor defined events")
             
-   var EvtVnd: UInt? = null
+   var EvtVnd: Int? = null
 
    @SunSpecPoint(id="DCA", label="Amps", offset=11, len=1, type="int16",
                  description="Total measured current",
@@ -75,13 +75,13 @@ class Model_402 {
                  description="Total metered Amp-hours",
                  notes="Total metered Amp-hours")
             
-   var DCAhr: UInt? = null
+   var DCAhr: Int? = null
 
    @SunSpecPoint(id="DCV", label="Voltage", offset=14, len=1, type="uint16",
                  description="Output Voltage",
                  notes="Output Voltage")
             
-   var DCV: UShort? = null
+   var DCV: Int? = null
 
    @SunSpecPoint(id="Tmp", label="Temp", offset=15, len=1, type="int16",
                  description="Internal operating temperature",
@@ -99,12 +99,12 @@ class Model_402 {
                  description="DC Performance ratio value",
                  notes="DC Performance ratio value")
             
-   var DCPR: UShort? = null
+   var DCPR: Int? = null
 
    @SunSpecPoint(id="DCWh", label="Watt-hours", offset=18, len=2, type="uint32",
                  description="Output energy",
                  notes="Output energy")
             
-   var DCWh: UInt? = null
+   var DCWh: Int? = null
 
 }

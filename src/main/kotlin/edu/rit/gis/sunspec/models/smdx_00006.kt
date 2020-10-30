@@ -15,517 +15,517 @@ class Model_6 {
                  description="Number of (offset, value) pairs being written",
                  notes="Number of (offset, value) pairs being written")
             
-   var X: UShort? = null
+   var X: Int? = null
 
    @SunSpecPoint(id="Off", label="Offset", offset=1, len=1, type="uint16",
                  description="Starting offset for write operation",
                  notes="Starting offset for write operation")
             
-   var Off: UShort? = null
+   var Off: Int? = null
 
    @SunSpecPoint(id="Val1", label="Value1", offset=2, len=1, type="uint16",
                  description="Value to write to control register at offset",
                  notes="Value to write to control register at offset")
             
-   var Val1: UShort? = null
+   var Val1: Int? = null
 
    @SunSpecPoint(id="Val2", label="", offset=3, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val2: UShort? = null
+   var Val2: Int? = null
 
    @SunSpecPoint(id="Val3", label="", offset=4, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val3: UShort? = null
+   var Val3: Int? = null
 
    @SunSpecPoint(id="Val4", label="", offset=5, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val4: UShort? = null
+   var Val4: Int? = null
 
    @SunSpecPoint(id="Val5", label="", offset=6, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val5: UShort? = null
+   var Val5: Int? = null
 
    @SunSpecPoint(id="Val6", label="", offset=7, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val6: UShort? = null
+   var Val6: Int? = null
 
    @SunSpecPoint(id="Val7", label="", offset=8, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val7: UShort? = null
+   var Val7: Int? = null
 
    @SunSpecPoint(id="Val8", label="", offset=9, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val8: UShort? = null
+   var Val8: Int? = null
 
    @SunSpecPoint(id="Val9", label="", offset=10, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val9: UShort? = null
+   var Val9: Int? = null
 
    @SunSpecPoint(id="Val10", label="", offset=11, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val10: UShort? = null
+   var Val10: Int? = null
 
    @SunSpecPoint(id="Val11", label="", offset=12, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val11: UShort? = null
+   var Val11: Int? = null
 
    @SunSpecPoint(id="Val12", label="", offset=13, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val12: UShort? = null
+   var Val12: Int? = null
 
    @SunSpecPoint(id="Val13", label="", offset=14, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val13: UShort? = null
+   var Val13: Int? = null
 
    @SunSpecPoint(id="Val14", label="", offset=15, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val14: UShort? = null
+   var Val14: Int? = null
 
    @SunSpecPoint(id="Val15", label="", offset=16, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val15: UShort? = null
+   var Val15: Int? = null
 
    @SunSpecPoint(id="Val16", label="", offset=17, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val16: UShort? = null
+   var Val16: Int? = null
 
    @SunSpecPoint(id="Val17", label="", offset=18, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val17: UShort? = null
+   var Val17: Int? = null
 
    @SunSpecPoint(id="Val18", label="", offset=19, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val18: UShort? = null
+   var Val18: Int? = null
 
    @SunSpecPoint(id="Val19", label="", offset=20, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val19: UShort? = null
+   var Val19: Int? = null
 
    @SunSpecPoint(id="Val20", label="", offset=21, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val20: UShort? = null
+   var Val20: Int? = null
 
    @SunSpecPoint(id="Val21", label="", offset=22, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val21: UShort? = null
+   var Val21: Int? = null
 
    @SunSpecPoint(id="Val22", label="", offset=23, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val22: UShort? = null
+   var Val22: Int? = null
 
    @SunSpecPoint(id="Val23", label="", offset=24, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val23: UShort? = null
+   var Val23: Int? = null
 
    @SunSpecPoint(id="Val24", label="", offset=25, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val24: UShort? = null
+   var Val24: Int? = null
 
    @SunSpecPoint(id="Val25", label="", offset=26, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val25: UShort? = null
+   var Val25: Int? = null
 
    @SunSpecPoint(id="Val26", label="", offset=27, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val26: UShort? = null
+   var Val26: Int? = null
 
    @SunSpecPoint(id="Val27", label="", offset=28, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val27: UShort? = null
+   var Val27: Int? = null
 
    @SunSpecPoint(id="Val28", label="", offset=29, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val28: UShort? = null
+   var Val28: Int? = null
 
    @SunSpecPoint(id="Val29", label="", offset=30, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val29: UShort? = null
+   var Val29: Int? = null
 
    @SunSpecPoint(id="Val30", label="", offset=31, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val30: UShort? = null
+   var Val30: Int? = null
 
    @SunSpecPoint(id="Val31", label="", offset=32, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val31: UShort? = null
+   var Val31: Int? = null
 
    @SunSpecPoint(id="Val32", label="", offset=33, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val32: UShort? = null
+   var Val32: Int? = null
 
    @SunSpecPoint(id="Val33", label="", offset=34, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val33: UShort? = null
+   var Val33: Int? = null
 
    @SunSpecPoint(id="Val34", label="", offset=35, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val34: UShort? = null
+   var Val34: Int? = null
 
    @SunSpecPoint(id="Val35", label="", offset=36, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val35: UShort? = null
+   var Val35: Int? = null
 
    @SunSpecPoint(id="Val36", label="", offset=37, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val36: UShort? = null
+   var Val36: Int? = null
 
    @SunSpecPoint(id="Val37", label="", offset=38, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val37: UShort? = null
+   var Val37: Int? = null
 
    @SunSpecPoint(id="Val38", label="", offset=39, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val38: UShort? = null
+   var Val38: Int? = null
 
    @SunSpecPoint(id="Val39", label="", offset=40, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val39: UShort? = null
+   var Val39: Int? = null
 
    @SunSpecPoint(id="Val40", label="", offset=41, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val40: UShort? = null
+   var Val40: Int? = null
 
    @SunSpecPoint(id="Val41", label="", offset=42, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val41: UShort? = null
+   var Val41: Int? = null
 
    @SunSpecPoint(id="Val42", label="", offset=43, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val42: UShort? = null
+   var Val42: Int? = null
 
    @SunSpecPoint(id="Val43", label="", offset=44, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val43: UShort? = null
+   var Val43: Int? = null
 
    @SunSpecPoint(id="Val44", label="", offset=45, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val44: UShort? = null
+   var Val44: Int? = null
 
    @SunSpecPoint(id="Val45", label="", offset=46, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val45: UShort? = null
+   var Val45: Int? = null
 
    @SunSpecPoint(id="Val46", label="", offset=47, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val46: UShort? = null
+   var Val46: Int? = null
 
    @SunSpecPoint(id="Val47", label="", offset=48, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val47: UShort? = null
+   var Val47: Int? = null
 
    @SunSpecPoint(id="Val48", label="", offset=49, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val48: UShort? = null
+   var Val48: Int? = null
 
    @SunSpecPoint(id="Val49", label="", offset=50, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val49: UShort? = null
+   var Val49: Int? = null
 
    @SunSpecPoint(id="Val50", label="", offset=51, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val50: UShort? = null
+   var Val50: Int? = null
 
    @SunSpecPoint(id="Val51", label="", offset=52, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val51: UShort? = null
+   var Val51: Int? = null
 
    @SunSpecPoint(id="Val52", label="", offset=53, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val52: UShort? = null
+   var Val52: Int? = null
 
    @SunSpecPoint(id="Val53", label="", offset=54, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val53: UShort? = null
+   var Val53: Int? = null
 
    @SunSpecPoint(id="Val54", label="", offset=55, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val54: UShort? = null
+   var Val54: Int? = null
 
    @SunSpecPoint(id="Val55", label="", offset=56, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val55: UShort? = null
+   var Val55: Int? = null
 
    @SunSpecPoint(id="Val56", label="", offset=57, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val56: UShort? = null
+   var Val56: Int? = null
 
    @SunSpecPoint(id="Val57", label="", offset=58, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val57: UShort? = null
+   var Val57: Int? = null
 
    @SunSpecPoint(id="Val58", label="", offset=59, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val58: UShort? = null
+   var Val58: Int? = null
 
    @SunSpecPoint(id="Val59", label="", offset=60, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val59: UShort? = null
+   var Val59: Int? = null
 
    @SunSpecPoint(id="Val60", label="", offset=61, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val60: UShort? = null
+   var Val60: Int? = null
 
    @SunSpecPoint(id="Val61", label="", offset=62, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val61: UShort? = null
+   var Val61: Int? = null
 
    @SunSpecPoint(id="Val62", label="", offset=63, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val62: UShort? = null
+   var Val62: Int? = null
 
    @SunSpecPoint(id="Val63", label="", offset=64, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val63: UShort? = null
+   var Val63: Int? = null
 
    @SunSpecPoint(id="Val64", label="", offset=65, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val64: UShort? = null
+   var Val64: Int? = null
 
    @SunSpecPoint(id="Val65", label="", offset=66, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val65: UShort? = null
+   var Val65: Int? = null
 
    @SunSpecPoint(id="Val66", label="", offset=67, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val66: UShort? = null
+   var Val66: Int? = null
 
    @SunSpecPoint(id="Val67", label="", offset=68, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val67: UShort? = null
+   var Val67: Int? = null
 
    @SunSpecPoint(id="Val68", label="", offset=69, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val68: UShort? = null
+   var Val68: Int? = null
 
    @SunSpecPoint(id="Val69", label="", offset=70, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val69: UShort? = null
+   var Val69: Int? = null
 
    @SunSpecPoint(id="Val70", label="", offset=71, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val70: UShort? = null
+   var Val70: Int? = null
 
    @SunSpecPoint(id="Val71", label="", offset=72, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val71: UShort? = null
+   var Val71: Int? = null
 
    @SunSpecPoint(id="Val72", label="", offset=73, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val72: UShort? = null
+   var Val72: Int? = null
 
    @SunSpecPoint(id="Val73", label="", offset=74, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val73: UShort? = null
+   var Val73: Int? = null
 
    @SunSpecPoint(id="Val74", label="", offset=75, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val74: UShort? = null
+   var Val74: Int? = null
 
    @SunSpecPoint(id="Val75", label="", offset=76, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val75: UShort? = null
+   var Val75: Int? = null
 
    @SunSpecPoint(id="Val76", label="", offset=77, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val76: UShort? = null
+   var Val76: Int? = null
 
    @SunSpecPoint(id="Val77", label="", offset=78, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val77: UShort? = null
+   var Val77: Int? = null
 
    @SunSpecPoint(id="Val78", label="", offset=79, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val78: UShort? = null
+   var Val78: Int? = null
 
    @SunSpecPoint(id="Val79", label="", offset=80, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val79: UShort? = null
+   var Val79: Int? = null
 
    @SunSpecPoint(id="Val80", label="", offset=81, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Val80: UShort? = null
+   var Val80: Int? = null
 
    @SunSpecPoint(id="Ts", label="Timestamp", offset=82, len=2, type="uint32",
                  description="Timestamp value is the number of seconds since January 1, 2000",
                  notes="Timestamp value is the number of seconds since January 1, 2000")
             
-   var Ts: UInt? = null
+   var Ts: Int? = null
 
    @SunSpecPoint(id="Ms", label="Milliseconds", offset=84, len=1, type="uint16",
                  description="Millisecond counter 0-999",
                  notes="Millisecond counter 0-999")
             
-   var Ms: UShort? = null
+   var Ms: Int? = null
 
    @SunSpecPoint(id="Seq", label="Sequence", offset=85, len=1, type="uint16",
                  description="Sequence number of request",
                  notes="Sequence number of request")
             
-   var Seq: UShort? = null
+   var Seq: Int? = null
 
    @SunSpecPoint(id="Role", label="Role", offset=86, len=1, type="uint16",
                  description="Signing key used 0-5",
                  notes="Signing key used 0-5")
             
-   var Role: UShort? = null
+   var Role: Int? = null
 
    @SunSpecPoint(id="Rsrvd", label="", offset=87, len=1, type="pad",
                  description="",
@@ -543,6 +543,6 @@ class Model_6 {
                  description="Number of registers comprising the digital signature.",
                  notes="Number of registers comprising the digital signature.")
             
-   var N: UShort? = null
+   var N: Int? = null
 
 }

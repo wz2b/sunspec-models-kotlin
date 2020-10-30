@@ -21,7 +21,7 @@ class Model_18 {
                  description="International Mobile Equipment Identifier for the interface",
                  notes="International Mobile Equipment Identifier for the interface")
             
-   var IMEI: UInt? = null
+   var IMEI: Int? = null
 
    @SunSpecPoint(id="APN", label="APN", offset=6, len=4, type="string",
                  description="Access Point Name for the interface",

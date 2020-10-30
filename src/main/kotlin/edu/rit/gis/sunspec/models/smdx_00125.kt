@@ -15,7 +15,7 @@ class Model_125 {
                  description="Is price-based charge/discharge mode active?",
                  notes="Is price-based charge/discharge mode active?")
             
-   var ModEna: UShort? = null
+   var ModEna: Short? = null
 
    @SunSpecPoint(id="SigType", label="SigType", offset=1, len=1, type="enum16",
                  description="Meaning of the pricing signal. When a Price schedule is used, type must match the schedule range variable description.",
@@ -33,19 +33,19 @@ class Model_125 {
                  description="Time window for charge/discharge pricing change.",
                  notes="Time window for charge/discharge pricing change.")
             
-   var WinTms: UShort? = null
+   var WinTms: Int? = null
 
    @SunSpecPoint(id="RvtTms", label="RvtTms", offset=4, len=1, type="uint16",
                  description="Timeout period for charge/discharge pricing change.",
                  notes="Timeout period for charge/discharge pricing change.")
             
-   var RvtTms: UShort? = null
+   var RvtTms: Int? = null
 
    @SunSpecPoint(id="RmpTms", label="RmpTms", offset=5, len=1, type="uint16",
                  description="Ramp time for moving from current charge or discharge level to new level.",
                  notes="Ramp time for moving from current charge or discharge level to new level.")
             
-   var RmpTms: UShort? = null
+   var RmpTms: Int? = null
 
    @SunSpecPoint(id="Sig_SF", label="Sig_SF", offset=6, len=1, type="sunssf",
                  description="Pricing signal scale factor.",

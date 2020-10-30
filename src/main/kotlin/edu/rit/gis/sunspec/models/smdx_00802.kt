@@ -15,79 +15,79 @@ class Model_802 {
                  description="Nameplate charge capacity in amp-hours.",
                  notes="Nameplate charge capacity in amp-hours.")
             
-   var AHRtg: UShort? = null
+   var AHRtg: Int? = null
 
    @SunSpecPoint(id="WHRtg", label="Nameplate Energy Capacity", offset=1, len=1, type="uint16",
                  description="Nameplate energy capacity in DC watt-hours.",
                  notes="Nameplate energy capacity in DC watt-hours.")
             
-   var WHRtg: UShort? = null
+   var WHRtg: Int? = null
 
    @SunSpecPoint(id="WChaRteMax", label="Nameplate Max Charge Rate", offset=2, len=1, type="uint16",
                  description="Maximum rate of energy transfer into the storage device in DC watts.",
                  notes="Maximum rate of energy transfer into the storage device in DC watts.")
             
-   var WChaRteMax: UShort? = null
+   var WChaRteMax: Int? = null
 
    @SunSpecPoint(id="WDisChaRteMax", label="Nameplate Max Discharge Rate", offset=3, len=1, type="uint16",
                  description="Maximum rate of energy transfer out of the storage device in DC watts.",
                  notes="Maximum rate of energy transfer out of the storage device in DC watts.")
             
-   var WDisChaRteMax: UShort? = null
+   var WDisChaRteMax: Int? = null
 
    @SunSpecPoint(id="DisChaRte", label="Self Discharge Rate", offset=4, len=1, type="uint16",
                  description="Self discharge rate.  Percentage of capacity (WHRtg) discharged per day.",
                  notes="Self discharge rate.  Percentage of capacity (WHRtg) discharged per day.")
             
-   var DisChaRte: UShort? = null
+   var DisChaRte: Int? = null
 
    @SunSpecPoint(id="SoCMax", label="Nameplate Max SoC", offset=5, len=1, type="uint16",
                  description="Manufacturer maximum state of charge, expressed as a percentage.",
                  notes="Manufacturer maximum state of charge, expressed as a percentage.")
             
-   var SoCMax: UShort? = null
+   var SoCMax: Int? = null
 
    @SunSpecPoint(id="SoCMin", label="Nameplate Min SoC", offset=6, len=1, type="uint16",
                  description="Manufacturer minimum state of charge, expressed as a percentage.",
                  notes="Manufacturer minimum state of charge, expressed as a percentage.")
             
-   var SoCMin: UShort? = null
+   var SoCMin: Int? = null
 
    @SunSpecPoint(id="SocRsvMax", label="Max Reserve Percent", offset=7, len=1, type="uint16",
                  description="Setpoint for maximum reserve for storage as a percentage of the nominal maximum storage.",
                  notes="Setpoint for maximum reserve for storage as a percentage of the nominal maximum storage.")
             
-   var SocRsvMax: UShort? = null
+   var SocRsvMax: Int? = null
 
    @SunSpecPoint(id="SoCRsvMin", label="Min Reserve Percent", offset=8, len=1, type="uint16",
                  description="Setpoint for maximum reserve for storage as a percentage of the nominal maximum storage.",
                  notes="Setpoint for maximum reserve for storage as a percentage of the nominal maximum storage.")
             
-   var SoCRsvMin: UShort? = null
+   var SoCRsvMin: Int? = null
 
    @SunSpecPoint(id="SoC", label="State of Charge", offset=9, len=1, type="uint16",
                  description="State of charge, expressed as a percentage.",
                  notes="State of charge, expressed as a percentage.")
             
-   var SoC: UShort? = null
+   var SoC: Int? = null
 
    @SunSpecPoint(id="DoD", label="Depth of Discharge", offset=10, len=1, type="uint16",
                  description="Depth of discharge, expressed as a percentage.",
                  notes="Depth of discharge, expressed as a percentage.")
             
-   var DoD: UShort? = null
+   var DoD: Int? = null
 
    @SunSpecPoint(id="SoH", label="State of Health", offset=11, len=1, type="uint16",
                  description="Percentage of battery life remaining.",
                  notes="Percentage of battery life remaining.")
             
-   var SoH: UShort? = null
+   var SoH: Int? = null
 
    @SunSpecPoint(id="NCyc", label="Cycle Count", offset=12, len=2, type="uint32",
                  description="Number of cycles executed in the battery.",
                  notes="Number of cycles executed in the battery.")
             
-   var NCyc: UInt? = null
+   var NCyc: Int? = null
 
    @SunSpecPoint(id="ChaSt", label="Charge Status", offset=14, len=0, type="enum16",
                  description="Charge status of storage device. Enumeration.",
@@ -105,19 +105,19 @@ class Model_802 {
                  description="Value is incremented every second with periodic resets to zero.",
                  notes="Value is incremented every second with periodic resets to zero.")
             
-   var Hb: UShort? = null
+   var Hb: Int? = null
 
    @SunSpecPoint(id="CtrlHb", label="Controller Heartbeat", offset=17, len=1, type="uint16",
                  description="Value is incremented every second with periodic resets to zero.",
                  notes="Value is incremented every second with periodic resets to zero.")
             
-   var CtrlHb: UShort? = null
+   var CtrlHb: Int? = null
 
    @SunSpecPoint(id="AlmRst", label="Alarm Reset", offset=18, len=1, type="uint16",
                  description="Used to reset any latched alarms.  1 = Reset.",
                  notes="Used to reset any latched alarms.  1 = Reset.")
             
-   var AlmRst: UShort? = null
+   var AlmRst: Int? = null
 
    @SunSpecPoint(id="Typ", label="Battery Type", offset=19, len=0, type="enum16",
                  description="Type of battery. Enumeration.",
@@ -141,91 +141,91 @@ class Model_802 {
                  description="Date the device warranty expires.",
                  notes="Date the device warranty expires.")
             
-   var WarrDt: UInt? = null
+   var WarrDt: Int? = null
 
    @SunSpecPoint(id="Evt1", label="Battery Event 1 Bitfield", offset=24, len=2, type="bitfield32",
                  description="Alarms and warnings.  Bit flags.",
                  notes="Alarms and warnings.  Bit flags.")
             
-   var Evt1: UInt? = null
+   var Evt1: Int? = null
 
    @SunSpecPoint(id="Evt2", label="Battery Event 2 Bitfield", offset=26, len=2, type="bitfield32",
                  description="Alarms and warnings.  Bit flags.",
                  notes="Alarms and warnings.  Bit flags.")
             
-   var Evt2: UInt? = null
+   var Evt2: Int? = null
 
    @SunSpecPoint(id="EvtVnd1", label="Vendor Event Bitfield 1", offset=28, len=2, type="bitfield32",
                  description="Vendor defined events.",
                  notes="Vendor defined events.")
             
-   var EvtVnd1: UInt? = null
+   var EvtVnd1: Int? = null
 
    @SunSpecPoint(id="EvtVnd2", label="Vendor Event Bitfield 2", offset=30, len=2, type="bitfield32",
                  description="Vendor defined events.",
                  notes="Vendor defined events.")
             
-   var EvtVnd2: UInt? = null
+   var EvtVnd2: Int? = null
 
    @SunSpecPoint(id="V", label="External Battery Voltage", offset=32, len=1, type="uint16",
                  description="DC Bus Voltage.",
                  notes="DC Bus Voltage.")
             
-   var V: UShort? = null
+   var V: Int? = null
 
    @SunSpecPoint(id="VMax", label="Max Battery Voltage", offset=33, len=1, type="uint16",
                  description="Instantaneous maximum battery voltage.",
                  notes="Instantaneous maximum battery voltage.")
             
-   var VMax: UShort? = null
+   var VMax: Int? = null
 
    @SunSpecPoint(id="VMin", label="Min Battery Voltage", offset=34, len=1, type="uint16",
                  description="Instantaneous minimum battery voltage.",
                  notes="Instantaneous minimum battery voltage.")
             
-   var VMin: UShort? = null
+   var VMin: Int? = null
 
    @SunSpecPoint(id="CellVMax", label="Max Cell Voltage", offset=35, len=1, type="uint16",
                  description="Maximum voltage for all cells in the bank.",
                  notes="Maximum voltage for all cells in the bank.")
             
-   var CellVMax: UShort? = null
+   var CellVMax: Int? = null
 
    @SunSpecPoint(id="CellVMaxStr", label="Max Cell Voltage String", offset=36, len=1, type="uint16",
                  description="String containing the cell with maximum voltage.",
                  notes="String containing the cell with maximum voltage.")
             
-   var CellVMaxStr: UShort? = null
+   var CellVMaxStr: Int? = null
 
    @SunSpecPoint(id="CellVMaxMod", label="Max Cell Voltage Module", offset=37, len=1, type="uint16",
                  description="Module containing the cell with maximum voltage.",
                  notes="Module containing the cell with maximum voltage.")
             
-   var CellVMaxMod: UShort? = null
+   var CellVMaxMod: Int? = null
 
    @SunSpecPoint(id="CellVMin", label="Min Cell Voltage", offset=38, len=1, type="uint16",
                  description="Minimum voltage for all cells in the bank.",
                  notes="Minimum voltage for all cells in the bank.")
             
-   var CellVMin: UShort? = null
+   var CellVMin: Int? = null
 
    @SunSpecPoint(id="CellVMinStr", label="Min Cell Voltage String", offset=39, len=1, type="uint16",
                  description="String containing the cell with minimum voltage.",
                  notes="String containing the cell with minimum voltage.")
             
-   var CellVMinStr: UShort? = null
+   var CellVMinStr: Int? = null
 
    @SunSpecPoint(id="CellVMinMod", label="Min Cell Voltage Module", offset=40, len=1, type="uint16",
                  description="Module containing the cell with minimum voltage.",
                  notes="Module containing the cell with minimum voltage.")
             
-   var CellVMinMod: UShort? = null
+   var CellVMinMod: Int? = null
 
    @SunSpecPoint(id="CellVAvg", label="Average Cell Voltage", offset=41, len=1, type="uint16",
                  description="Average cell voltage for all cells in the bank.",
                  notes="Average cell voltage for all cells in the bank.")
             
-   var CellVAvg: UShort? = null
+   var CellVAvg: Int? = null
 
    @SunSpecPoint(id="A", label="Total DC Current", offset=42, len=1, type="int16",
                  description="Total DC current flowing to/from the battery bank.",
@@ -237,13 +237,13 @@ class Model_802 {
                  description="Instantaneous maximum DC charge current.",
                  notes="Instantaneous maximum DC charge current.")
             
-   var AChaMax: UShort? = null
+   var AChaMax: Int? = null
 
    @SunSpecPoint(id="ADisChaMax", label="Max Discharge Current", offset=44, len=1, type="uint16",
                  description="Instantaneous maximum DC discharge current.",
                  notes="Instantaneous maximum DC discharge current.")
             
-   var ADisChaMax: UShort? = null
+   var ADisChaMax: Int? = null
 
    @SunSpecPoint(id="W", label="Total Power", offset=45, len=1, type="int16",
                  description="Total power flowing to/from the battery bank.",

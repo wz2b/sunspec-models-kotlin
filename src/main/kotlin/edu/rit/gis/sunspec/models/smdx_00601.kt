@@ -39,7 +39,7 @@ class Model_601 {
                  description="Number of the day in the year (1-366)",
                  notes="Number of the day in the year (1-366)")
             
-   var Day: UShort? = null
+   var Day: Int? = null
 
    @SunSpecPoint(id="GlblElCtl", label="Manual Elevation", offset=18, len=2, type="int32",
                  description="Global manual override target position of elevation in degrees from horizontal.  Unimplemented for single axis azimuth tracker type",
@@ -63,7 +63,7 @@ class Model_601 {
                  description="Global tracker alarm conditions",
                  notes="Global tracker alarm conditions")
             
-   var GlblAlm: UShort? = null
+   var GlblAlm: Short? = null
 
    @SunSpecPoint(id="Dgr_SF", label="SF", offset=24, len=1, type="sunssf",
                  description="Scale Factor for targets and position measurements in degrees",
@@ -75,6 +75,6 @@ class Model_601 {
                  description="Number of trackers being controlled.  Size of repeating block.",
                  notes="Number of trackers being controlled.  Size of repeating block.")
             
-   var N: UShort? = null
+   var N: Int? = null
 
 }

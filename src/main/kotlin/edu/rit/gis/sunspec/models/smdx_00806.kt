@@ -15,6 +15,6 @@ class Model_806 {
                  description="",
                  notes="")
             
-   var BatTBD: UShort? = null
+   var BatTBD: Int? = null
 
 }

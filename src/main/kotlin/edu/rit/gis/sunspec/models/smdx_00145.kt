@@ -15,43 +15,43 @@ class Model_145 {
                  description="Ramp up rate as a percentage of max current.",
                  notes="Ramp up rate as a percentage of max current.")
             
-   var NomRmpUpRte: UShort? = null
+   var NomRmpUpRte: Int? = null
 
    @SunSpecPoint(id="NomRmpDnRte", label="NomRmpDnRte", offset=1, len=1, type="uint16",
                  description="Ramp down rate as a percentage of max current.",
                  notes="Ramp down rate as a percentage of max current.")
             
-   var NomRmpDnRte: UShort? = null
+   var NomRmpDnRte: Int? = null
 
    @SunSpecPoint(id="EmgRmpUpRte", label="Emergency Ramp Up Rate", offset=2, len=1, type="uint16",
                  description="Emergency ramp up rate as a percentage of max current.",
                  notes="Emergency ramp up rate as a percentage of max current.")
             
-   var EmgRmpUpRte: UShort? = null
+   var EmgRmpUpRte: Int? = null
 
    @SunSpecPoint(id="EmgRmpDnRte", label="Emergency Ramp Down Rate", offset=3, len=1, type="uint16",
                  description="Emergency ramp down rate as a percentage of max current.",
                  notes="Emergency ramp down rate as a percentage of max current.")
             
-   var EmgRmpDnRte: UShort? = null
+   var EmgRmpDnRte: Int? = null
 
    @SunSpecPoint(id="ConnRmpUpRte", label="Connect Ramp Up Rate", offset=4, len=1, type="uint16",
                  description="Connect ramp up rate as a percentage of max current.",
                  notes="Connect ramp up rate as a percentage of max current.")
             
-   var ConnRmpUpRte: UShort? = null
+   var ConnRmpUpRte: Int? = null
 
    @SunSpecPoint(id="ConnRmpDnRte", label="Connect Ramp Down Rate", offset=5, len=1, type="uint16",
                  description="Connect ramp down rate as a percentage of max current.",
                  notes="Connect ramp down rate as a percentage of max current.")
             
-   var ConnRmpDnRte: UShort? = null
+   var ConnRmpDnRte: Int? = null
 
    @SunSpecPoint(id="AGra", label="Default Ramp Rate", offset=6, len=1, type="uint16",
                  description="Ramp rate specified in percent of max current.",
                  notes="Ramp rate specified in percent of max current.")
             
-   var AGra: UShort? = null
+   var AGra: Int? = null
 
    @SunSpecPoint(id="Rmp_SF", label="Ramp Rate Scale Factor", offset=7, len=1, type="sunssf",
                  description="Ramp Rate Scale Factor",

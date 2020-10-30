@@ -15,7 +15,7 @@ class Model_7 {
                  description="Sequence number from the request",
                  notes="Sequence number from the request")
             
-   var RqSeq: UShort? = null
+   var RqSeq: Int? = null
 
    @SunSpecPoint(id="Sts", label="Status", offset=1, len=0, type="enum16",
                  description="Status of last write operation",
@@ -27,19 +27,19 @@ class Model_7 {
                  description="Timestamp value is the number of seconds since January 1, 2000",
                  notes="Timestamp value is the number of seconds since January 1, 2000")
             
-   var Ts: UInt? = null
+   var Ts: Int? = null
 
    @SunSpecPoint(id="Ms", label="Milliseconds", offset=4, len=1, type="uint16",
                  description="Millisecond counter 0-999",
                  notes="Millisecond counter 0-999")
             
-   var Ms: UShort? = null
+   var Ms: Int? = null
 
    @SunSpecPoint(id="Seq", label="Sequence", offset=5, len=1, type="uint16",
                  description="Sequence number of response",
                  notes="Sequence number of response")
             
-   var Seq: UShort? = null
+   var Seq: Int? = null
 
    @SunSpecPoint(id="Alm", label="Alarm", offset=6, len=0, type="enum16",
                  description="Bitmask alarm code",
@@ -63,6 +63,6 @@ class Model_7 {
                  description="Number of registers comprising the digital signature.",
                  notes="Number of registers comprising the digital signature.")
             
-   var N: UShort? = null
+   var N: Int? = null
 
 }

@@ -15,7 +15,7 @@ class Model_308 {
                  description="Global Horizontal Irradiance",
                  notes="Global Horizontal Irradiance")
             
-   var GHI: UShort? = null
+   var GHI: Int? = null
 
    @SunSpecPoint(id="TmpBOM", label="Temp", offset=1, len=1, type="int16",
                  description="Back of module temperature measurement",
@@ -33,6 +33,6 @@ class Model_308 {
                  description="",
                  notes="")
             
-   var WndSpd: UShort? = null
+   var WndSpd: Int? = null
 
 }

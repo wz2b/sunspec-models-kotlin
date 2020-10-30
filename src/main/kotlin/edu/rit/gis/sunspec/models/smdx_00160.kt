@@ -39,18 +39,18 @@ class Model_160 {
                  description="",
                  notes="")
             
-   var Evt: UInt? = null
+   var Evt: Int? = null
 
    @SunSpecPoint(id="N", label="Number of Modules", offset=6, len=1, type="count",
                  description="",
                  notes="")
             
-   var N: UInt? = null
+   var N: Int? = null
 
    @SunSpecPoint(id="TmsPer", label="Timestamp Period", offset=7, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var TmsPer: UShort? = null
+   var TmsPer: Int? = null
 
 }

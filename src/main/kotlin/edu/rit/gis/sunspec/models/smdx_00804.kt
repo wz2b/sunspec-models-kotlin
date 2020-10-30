@@ -15,19 +15,19 @@ class Model_804 {
                  description="Index of the string within the bank.",
                  notes="Index of the string within the bank.")
             
-   var Idx: UShort? = null
+   var Idx: Int? = null
 
    @SunSpecPoint(id="NMod", label="Module Count", offset=1, len=1, type="uint16",
                  description="Count of modules in the string.",
                  notes="Count of modules in the string.")
             
-   var NMod: UShort? = null
+   var NMod: Int? = null
 
    @SunSpecPoint(id="St", label="String Status", offset=2, len=2, type="bitfield32",
                  description="Current status of the string.",
                  notes="Current status of the string.")
             
-   var St: UInt? = null
+   var St: Int? = null
 
    @SunSpecPoint(id="ConFail", label="Connection Failure Reason", offset=4, len=0, type="enum16",
                  description="",
@@ -39,31 +39,31 @@ class Model_804 {
                  description="Number of cells currently being balanced in the string.",
                  notes="Number of cells currently being balanced in the string.")
             
-   var NCellBal: UShort? = null
+   var NCellBal: Int? = null
 
    @SunSpecPoint(id="SoC", label="String State of Charge", offset=6, len=1, type="uint16",
                  description="Battery string state of charge, expressed as a percentage.",
                  notes="Battery string state of charge, expressed as a percentage.")
             
-   var SoC: UShort? = null
+   var SoC: Int? = null
 
    @SunSpecPoint(id="DoD", label="String Depth of Discharge", offset=7, len=1, type="uint16",
                  description="Depth of discharge for the string, expressed as a percentage.",
                  notes="Depth of discharge for the string, expressed as a percentage.")
             
-   var DoD: UShort? = null
+   var DoD: Int? = null
 
    @SunSpecPoint(id="NCyc", label="String Cycle Count", offset=8, len=2, type="uint32",
                  description="Number of discharge cycles executed upon the string.",
                  notes="Number of discharge cycles executed upon the string.")
             
-   var NCyc: UInt? = null
+   var NCyc: Int? = null
 
    @SunSpecPoint(id="SoH", label="String State of Health", offset=10, len=1, type="uint16",
                  description="Battery string state of health, expressed as a percentage.",
                  notes="Battery string state of health, expressed as a percentage.")
             
-   var SoH: UShort? = null
+   var SoH: Int? = null
 
    @SunSpecPoint(id="A", label="String Current", offset=11, len=1, type="int16",
                  description="String current measurement.",
@@ -75,37 +75,37 @@ class Model_804 {
                  description="String voltage measurement.",
                  notes="String voltage measurement.")
             
-   var V: UShort? = null
+   var V: Int? = null
 
    @SunSpecPoint(id="CellVMax", label="Max Cell Voltage", offset=13, len=1, type="uint16",
                  description="Maximum voltage for all cells in the string.",
                  notes="Maximum voltage for all cells in the string.")
             
-   var CellVMax: UShort? = null
+   var CellVMax: Int? = null
 
    @SunSpecPoint(id="CellVMaxMod", label="Max Cell Voltage Module", offset=14, len=1, type="uint16",
                  description="Module containing the cell with maximum cell voltage.",
                  notes="Module containing the cell with maximum cell voltage.")
             
-   var CellVMaxMod: UShort? = null
+   var CellVMaxMod: Int? = null
 
    @SunSpecPoint(id="CellVMin", label="Min Cell Voltage", offset=15, len=1, type="uint16",
                  description="Minimum voltage for all cells in the string.",
                  notes="Minimum voltage for all cells in the string.")
             
-   var CellVMin: UShort? = null
+   var CellVMin: Int? = null
 
    @SunSpecPoint(id="CellVMinMod", label="Min Cell Voltage Module", offset=16, len=1, type="uint16",
                  description="Module containing the cell with minimum cell voltage.",
                  notes="Module containing the cell with minimum cell voltage.")
             
-   var CellVMinMod: UShort? = null
+   var CellVMinMod: Int? = null
 
    @SunSpecPoint(id="CellVAvg", label="Average Cell Voltage", offset=17, len=1, type="uint16",
                  description="Average voltage for all cells in the string.",
                  notes="Average voltage for all cells in the string.")
             
-   var CellVAvg: UShort? = null
+   var CellVAvg: Int? = null
 
    @SunSpecPoint(id="ModTmpMax", label="Max Module Temperature", offset=18, len=1, type="int16",
                  description="Maximum temperature for all modules in the string.",
@@ -117,7 +117,7 @@ class Model_804 {
                  description="Module with the maximum temperature.",
                  notes="Module with the maximum temperature.")
             
-   var ModTmpMaxMod: UShort? = null
+   var ModTmpMaxMod: Int? = null
 
    @SunSpecPoint(id="ModTmpMin", label="Min Module Temperature", offset=20, len=1, type="int16",
                  description="Minimum temperature for all modules in the string.",
@@ -129,7 +129,7 @@ class Model_804 {
                  description="Module with the minimum temperature.",
                  notes="Module with the minimum temperature.")
             
-   var ModTmpMinMod: UShort? = null
+   var ModTmpMinMod: Int? = null
 
    @SunSpecPoint(id="ModTmpAvg", label="Average Module Temperature", offset=22, len=1, type="int16",
                  description="Average temperature for all modules in the string.",
@@ -147,31 +147,31 @@ class Model_804 {
                  description="Status of the contactor(s) for the string.",
                  notes="Status of the contactor(s) for the string.")
             
-   var ConSt: UInt? = null
+   var ConSt: Int? = null
 
    @SunSpecPoint(id="Evt1", label="String Event 1", offset=26, len=2, type="bitfield32",
                  description="Alarms, warnings and status values.  Bit flags.",
                  notes="Alarms, warnings and status values.  Bit flags.")
             
-   var Evt1: UInt? = null
+   var Evt1: Int? = null
 
    @SunSpecPoint(id="Evt2", label="String Event 2", offset=28, len=2, type="bitfield32",
                  description="Alarms, warnings and status values.  Bit flags.",
                  notes="Alarms, warnings and status values.  Bit flags.")
             
-   var Evt2: UInt? = null
+   var Evt2: Int? = null
 
    @SunSpecPoint(id="EvtVnd1", label="Vendor Event Bitfield 1", offset=30, len=2, type="bitfield32",
                  description="Vendor defined events.",
                  notes="Vendor defined events.")
             
-   var EvtVnd1: UInt? = null
+   var EvtVnd1: Int? = null
 
    @SunSpecPoint(id="EvtVnd2", label="Vendor Event Bitfield 2", offset=32, len=2, type="bitfield32",
                  description="Vendor defined events.",
                  notes="Vendor defined events.")
             
-   var EvtVnd2: UInt? = null
+   var EvtVnd2: Int? = null
 
    @SunSpecPoint(id="SetEna", label="Enable/Disable String", offset=34, len=0, type="enum16",
                  description="Enables and disables the string.  Should reset to 0 upon completion.",

@@ -15,13 +15,13 @@ class Model_121 {
                  description="Setting for maximum power output. Default to WRtg.",
                  notes="Setting for maximum power output. Default to WRtg.")
             
-   var WMax: UShort? = null
+   var WMax: Int? = null
 
    @SunSpecPoint(id="VRef", label="VRef", offset=1, len=1, type="uint16",
                  description="Voltage at the PCC.",
                  notes="Voltage at the PCC.")
             
-   var VRef: UShort? = null
+   var VRef: Int? = null
 
    @SunSpecPoint(id="VRefOfs", label="VRefOfs", offset=2, len=1, type="int16",
                  description="Offset  from PCC to inverter.",
@@ -33,19 +33,19 @@ class Model_121 {
                  description="Setpoint for maximum voltage.",
                  notes="Setpoint for maximum voltage.")
             
-   var VMax: UShort? = null
+   var VMax: Int? = null
 
    @SunSpecPoint(id="VMin", label="VMin", offset=4, len=1, type="uint16",
                  description="Setpoint for minimum voltage.",
                  notes="Setpoint for minimum voltage.")
             
-   var VMin: UShort? = null
+   var VMin: Int? = null
 
    @SunSpecPoint(id="VAMax", label="VAMax", offset=5, len=1, type="uint16",
                  description="Setpoint for maximum apparent power. Default to VARtg.",
                  notes="Setpoint for maximum apparent power. Default to VARtg.")
             
-   var VAMax: UShort? = null
+   var VAMax: Int? = null
 
    @SunSpecPoint(id="VArMaxQ1", label="VArMaxQ1", offset=6, len=1, type="int16",
                  description="Setting for maximum reactive power in quadrant 1. Default to VArRtgQ1.",
@@ -75,7 +75,7 @@ class Model_121 {
                  description="Default ramp rate of change of active power due to command or internal action.",
                  notes="Default ramp rate of change of active power due to command or internal action.")
             
-   var WGra: UShort? = null
+   var WGra: Int? = null
 
    @SunSpecPoint(id="PFMinQ1", label="PFMinQ1", offset=11, len=1, type="int16",
                  description="Setpoint for minimum power factor value in quadrant 1. Default to PFRtgQ1.",
@@ -117,13 +117,13 @@ class Model_121 {
                  description="Setpoint for maximum ramp rate as percentage of nominal maximum ramp rate. This setting will limit the rate that watts delivery to the grid can increase or decrease in response to intermittent PV generation.",
                  notes="Setpoint for maximum ramp rate as percentage of nominal maximum ramp rate. This setting will limit the rate that watts delivery to the grid can increase or decrease in response to intermittent PV generation.")
             
-   var MaxRmpRte: UShort? = null
+   var MaxRmpRte: Int? = null
 
    @SunSpecPoint(id="ECPNomHz", label="ECPNomHz", offset=18, len=1, type="uint16",
                  description="Setpoint for nominal frequency at the ECP.",
                  notes="Setpoint for nominal frequency at the ECP.")
             
-   var ECPNomHz: UShort? = null
+   var ECPNomHz: Int? = null
 
    @SunSpecPoint(id="ConnPh", label="ConnPh", offset=19, len=1, type="enum16",
                  description="Identity of connected phase for single phase inverters. A=1 B=2 C=3.",

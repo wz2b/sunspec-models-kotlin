@@ -15,25 +15,25 @@ class Model_64110 {
                  description="",
                  notes="")
             
-   var MajorFWRev: UShort? = null
+   var MajorFWRev: Int? = null
 
    @SunSpecPoint(id="MidFWRev", label="AXS Mid Firmware Number", offset=1, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var MidFWRev: UShort? = null
+   var MidFWRev: Int? = null
 
    @SunSpecPoint(id="MinorFWRev", label="AXS Minor Firmware Number", offset=2, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var MinorFWRev: UShort? = null
+   var MinorFWRev: Int? = null
 
    @SunSpecPoint(id="EncrypKey", label="Encryption Key", offset=3, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var EncrypKey: UShort? = null
+   var EncrypKey: Int? = null
 
    @SunSpecPoint(id="MAC_Address", label="MAC Address", offset=4, len=7, type="string",
                  description="",
@@ -87,7 +87,7 @@ class Model_64110 {
                  description="",
                  notes="")
             
-   var Modbus_port: UShort? = null
+   var Modbus_port: Int? = null
 
    @SunSpecPoint(id="SMTP_server_nm", label="SMTP Server Name", offset=31, len=20, type="string",
                  description="",
@@ -123,13 +123,13 @@ class Model_64110 {
                  description="",
                  notes="")
             
-   var Stat_email_int: UShort? = null
+   var Stat_email_int: Int? = null
 
    @SunSpecPoint(id="Stat_start_HR", label="Status Email Start Hour", offset=97, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Stat_start_HR: UShort? = null
+   var Stat_start_HR: Int? = null
 
    @SunSpecPoint(id="Stat_email_sub", label="Status Email Subject", offset=98, len=25, type="string",
                  description="",
@@ -189,13 +189,13 @@ class Model_64110 {
                  description="",
                  notes="")
             
-   var Log_write_int: UShort? = null
+   var Log_write_int: Int? = null
 
    @SunSpecPoint(id="Log_retain", label="SD-Card Datalog Retain", offset=246, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Log_retain: UShort? = null
+   var Log_retain: Int? = null
 
    @SunSpecPoint(id="Log_mode", label="SD-Card Datalog Mode", offset=247, len=0, type="enum16",
                  description="",
@@ -225,37 +225,37 @@ class Model_64110 {
                  description="",
                  notes="")
             
-   var Date_year: UShort? = null
+   var Date_year: Int? = null
 
    @SunSpecPoint(id="Date_month", label="Month", offset=271, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Date_month: UShort? = null
+   var Date_month: Int? = null
 
    @SunSpecPoint(id="Date_Day", label="Day", offset=272, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Date_Day: UShort? = null
+   var Date_Day: Int? = null
 
    @SunSpecPoint(id="Time_hour", label="Hour", offset=273, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Time_hour: UShort? = null
+   var Time_hour: Int? = null
 
    @SunSpecPoint(id="Time_minute", label="Minute", offset=274, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Time_minute: UShort? = null
+   var Time_minute: Int? = null
 
    @SunSpecPoint(id="Time_second", label="Second", offset=275, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var Time_second: UShort? = null
+   var Time_second: Int? = null
 
    @SunSpecPoint(id="Battery_temp", label="Battery Temperature", offset=276, len=1, type="int16",
                  description="",
@@ -279,18 +279,18 @@ class Model_64110 {
                  description="",
                  notes="")
             
-   var AXS_Error: UShort? = null
+   var AXS_Error: Short? = null
 
    @SunSpecPoint(id="AXS_Status", label="AXS Status", offset=280, len=1, type="bitfield16",
                  description="",
                  notes="")
             
-   var AXS_Status: UShort? = null
+   var AXS_Status: Short? = null
 
    @SunSpecPoint(id="AXS_Spare", label="Spare", offset=281, len=1, type="uint16",
                  description="",
                  notes="")
             
-   var AXS_Spare: UShort? = null
+   var AXS_Spare: Int? = null
 
 }

@@ -15,13 +15,13 @@ class Model_123 {
                  description="Time window for connect/disconnect.",
                  notes="Time window for connect/disconnect.")
             
-   var Conn_WinTms: UShort? = null
+   var Conn_WinTms: Int? = null
 
    @SunSpecPoint(id="Conn_RvrtTms", label="Conn_RvrtTms", offset=1, len=1, type="uint16",
                  description="Timeout period for connect/disconnect.",
                  notes="Timeout period for connect/disconnect.")
             
-   var Conn_RvrtTms: UShort? = null
+   var Conn_RvrtTms: Int? = null
 
    @SunSpecPoint(id="Conn", label="Conn", offset=2, len=1, type="enum16",
                  description="Enumerated valued.  Connection control.",
@@ -33,25 +33,25 @@ class Model_123 {
                  description="Set power output to specified level.",
                  notes="Set power output to specified level.")
             
-   var WMaxLimPct: UShort? = null
+   var WMaxLimPct: Int? = null
 
    @SunSpecPoint(id="WMaxLimPct_WinTms", label="WMaxLimPct_WinTms", offset=4, len=1, type="uint16",
                  description="Time window for power limit change.",
                  notes="Time window for power limit change.")
             
-   var WMaxLimPct_WinTms: UShort? = null
+   var WMaxLimPct_WinTms: Int? = null
 
    @SunSpecPoint(id="WMaxLimPct_RvrtTms", label="WMaxLimPct_RvrtTms", offset=5, len=1, type="uint16",
                  description="Timeout period for power limit.",
                  notes="Timeout period for power limit.")
             
-   var WMaxLimPct_RvrtTms: UShort? = null
+   var WMaxLimPct_RvrtTms: Int? = null
 
    @SunSpecPoint(id="WMaxLimPct_RmpTms", label="WMaxLimPct_RmpTms", offset=6, len=1, type="uint16",
                  description="Ramp time for moving from current setpoint to new setpoint.",
                  notes="Ramp time for moving from current setpoint to new setpoint.")
             
-   var WMaxLimPct_RmpTms: UShort? = null
+   var WMaxLimPct_RmpTms: Int? = null
 
    @SunSpecPoint(id="WMaxLim_Ena", label="WMaxLim_Ena", offset=7, len=1, type="enum16",
                  description="Enumerated valued.  Throttle enable/disable control.",
@@ -69,19 +69,19 @@ class Model_123 {
                  description="Time window for power factor change.",
                  notes="Time window for power factor change.")
             
-   var OutPFSet_WinTms: UShort? = null
+   var OutPFSet_WinTms: Int? = null
 
    @SunSpecPoint(id="OutPFSet_RvrtTms", label="OutPFSet_RvrtTms", offset=10, len=1, type="uint16",
                  description="Timeout period for power factor.",
                  notes="Timeout period for power factor.")
             
-   var OutPFSet_RvrtTms: UShort? = null
+   var OutPFSet_RvrtTms: Int? = null
 
    @SunSpecPoint(id="OutPFSet_RmpTms", label="OutPFSet_RmpTms", offset=11, len=1, type="uint16",
                  description="Ramp time for moving from current setpoint to new setpoint.",
                  notes="Ramp time for moving from current setpoint to new setpoint.")
             
-   var OutPFSet_RmpTms: UShort? = null
+   var OutPFSet_RmpTms: Int? = null
 
    @SunSpecPoint(id="OutPFSet_Ena", label="OutPFSet_Ena", offset=12, len=1, type="enum16",
                  description="Enumerated valued.  Fixed power factor enable/disable control.",
@@ -111,19 +111,19 @@ class Model_123 {
                  description="Time window for VAR limit change.",
                  notes="Time window for VAR limit change.")
             
-   var VArPct_WinTms: UShort? = null
+   var VArPct_WinTms: Int? = null
 
    @SunSpecPoint(id="VArPct_RvrtTms", label="VArPct_RvrtTms", offset=17, len=1, type="uint16",
                  description="Timeout period for VAR limit.",
                  notes="Timeout period for VAR limit.")
             
-   var VArPct_RvrtTms: UShort? = null
+   var VArPct_RvrtTms: Int? = null
 
    @SunSpecPoint(id="VArPct_RmpTms", label="VArPct_RmpTms", offset=18, len=1, type="uint16",
                  description="Ramp time for moving from current setpoint to new setpoint.",
                  notes="Ramp time for moving from current setpoint to new setpoint.")
             
-   var VArPct_RmpTms: UShort? = null
+   var VArPct_RmpTms: Int? = null
 
    @SunSpecPoint(id="VArPct_Mod", label="VArPct_Mod", offset=19, len=1, type="enum16",
                  description="Enumerated value. VAR percent limit mode.",

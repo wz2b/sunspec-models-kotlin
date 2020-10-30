@@ -15,25 +15,25 @@ class Model_103 {
                  description="AC Current",
                  notes="AC Current")
             
-   var A: UShort? = null
+   var A: Int? = null
 
    @SunSpecPoint(id="AphA", label="Amps PhaseA", offset=1, len=1, type="uint16",
                  description="Phase A Current",
                  notes="Phase A Current")
             
-   var AphA: UShort? = null
+   var AphA: Int? = null
 
    @SunSpecPoint(id="AphB", label="Amps PhaseB", offset=2, len=1, type="uint16",
                  description="Phase B Current",
                  notes="Phase B Current")
             
-   var AphB: UShort? = null
+   var AphB: Int? = null
 
    @SunSpecPoint(id="AphC", label="Amps PhaseC", offset=3, len=1, type="uint16",
                  description="Phase C Current",
                  notes="Phase C Current")
             
-   var AphC: UShort? = null
+   var AphC: Int? = null
 
    @SunSpecPoint(id="A_SF", label="", offset=4, len=1, type="sunssf",
                  description="",
@@ -45,37 +45,37 @@ class Model_103 {
                  description="Phase Voltage AB",
                  notes="Phase Voltage AB")
             
-   var PPVphAB: UShort? = null
+   var PPVphAB: Int? = null
 
    @SunSpecPoint(id="PPVphBC", label="Phase Voltage BC", offset=6, len=1, type="uint16",
                  description="Phase Voltage BC",
                  notes="Phase Voltage BC")
             
-   var PPVphBC: UShort? = null
+   var PPVphBC: Int? = null
 
    @SunSpecPoint(id="PPVphCA", label="Phase Voltage CA", offset=7, len=1, type="uint16",
                  description="Phase Voltage CA",
                  notes="Phase Voltage CA")
             
-   var PPVphCA: UShort? = null
+   var PPVphCA: Int? = null
 
    @SunSpecPoint(id="PhVphA", label="Phase Voltage AN", offset=8, len=1, type="uint16",
                  description="Phase Voltage AN",
                  notes="Phase Voltage AN")
             
-   var PhVphA: UShort? = null
+   var PhVphA: Int? = null
 
    @SunSpecPoint(id="PhVphB", label="Phase Voltage BN", offset=9, len=1, type="uint16",
                  description="Phase Voltage BN",
                  notes="Phase Voltage BN")
             
-   var PhVphB: UShort? = null
+   var PhVphB: Int? = null
 
    @SunSpecPoint(id="PhVphC", label="Phase Voltage CN", offset=10, len=1, type="uint16",
                  description="Phase Voltage CN",
                  notes="Phase Voltage CN")
             
-   var PhVphC: UShort? = null
+   var PhVphC: Int? = null
 
    @SunSpecPoint(id="V_SF", label="", offset=11, len=1, type="sunssf",
                  description="",
@@ -99,7 +99,7 @@ class Model_103 {
                  description="Line Frequency",
                  notes="Line Frequency")
             
-   var Hz: UShort? = null
+   var Hz: Int? = null
 
    @SunSpecPoint(id="Hz_SF", label="", offset=15, len=1, type="sunssf",
                  description="",
@@ -147,7 +147,7 @@ class Model_103 {
                  description="AC Energy",
                  notes="AC Energy")
             
-   var WH: UInt? = null
+   var WH: Long? = null
 
    @SunSpecPoint(id="WH_SF", label="", offset=24, len=1, type="sunssf",
                  description="",
@@ -159,7 +159,7 @@ class Model_103 {
                  description="DC Current",
                  notes="DC Current")
             
-   var DCA: UShort? = null
+   var DCA: Int? = null
 
    @SunSpecPoint(id="DCA_SF", label="", offset=26, len=1, type="sunssf",
                  description="",
@@ -171,7 +171,7 @@ class Model_103 {
                  description="DC Voltage",
                  notes="DC Voltage")
             
-   var DCV: UShort? = null
+   var DCV: Int? = null
 
    @SunSpecPoint(id="DCV_SF", label="", offset=28, len=1, type="sunssf",
                  description="",
@@ -237,36 +237,36 @@ class Model_103 {
                  description="Bitmask value. Event fields",
                  notes="Bitmask value. Event fields")
             
-   var Evt1: UInt? = null
+   var Evt1: Int? = null
 
    @SunSpecPoint(id="Evt2", label="Event Bitfield 2", offset=40, len=2, type="bitfield32",
                  description="Reserved for future use",
                  notes="Reserved for future use")
             
-   var Evt2: UInt? = null
+   var Evt2: Int? = null
 
    @SunSpecPoint(id="EvtVnd1", label="Vendor Event Bitfield 1", offset=42, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd1: UInt? = null
+   var EvtVnd1: Int? = null
 
    @SunSpecPoint(id="EvtVnd2", label="Vendor Event Bitfield 2", offset=44, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd2: UInt? = null
+   var EvtVnd2: Int? = null
 
    @SunSpecPoint(id="EvtVnd3", label="Vendor Event Bitfield 3", offset=46, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd3: UInt? = null
+   var EvtVnd3: Int? = null
 
    @SunSpecPoint(id="EvtVnd4", label="Vendor Event Bitfield 4", offset=48, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd4: UInt? = null
+   var EvtVnd4: Int? = null
 
 }

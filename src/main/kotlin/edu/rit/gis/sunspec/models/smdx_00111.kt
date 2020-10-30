@@ -165,36 +165,36 @@ class Model_111 {
                  description="Bitmask value. Event fields",
                  notes="Bitmask value. Event fields")
             
-   var Evt1: UInt? = null
+   var Evt1: Int? = null
 
    @SunSpecPoint(id="Evt2", label="Event Bitfield 2", offset=50, len=2, type="bitfield32",
                  description="Reserved for future use",
                  notes="Reserved for future use")
             
-   var Evt2: UInt? = null
+   var Evt2: Int? = null
 
    @SunSpecPoint(id="EvtVnd1", label="Vendor Event Bitfield 1", offset=52, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd1: UInt? = null
+   var EvtVnd1: Int? = null
 
    @SunSpecPoint(id="EvtVnd2", label="Vendor Event Bitfield 2", offset=54, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd2: UInt? = null
+   var EvtVnd2: Int? = null
 
    @SunSpecPoint(id="EvtVnd3", label="Vendor Event Bitfield 3", offset=56, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd3: UInt? = null
+   var EvtVnd3: Int? = null
 
    @SunSpecPoint(id="EvtVnd4", label="Vendor Event Bitfield 4", offset=58, len=2, type="bitfield32",
                  description="Vendor defined events",
                  notes="Vendor defined events")
             
-   var EvtVnd4: UInt? = null
+   var EvtVnd4: Int? = null
 
 }

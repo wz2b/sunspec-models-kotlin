@@ -69,7 +69,7 @@ class Model_16 {
                  description="Bitmask value.  Link control flags",
                  notes="Bitmask value.  Link control flags")
             
-   var LnkCtl: UShort? = null
+   var LnkCtl: Short? = null
 
    @SunSpecPoint(id="Pad", label="", offset=51, len=1, type="pad",
                  description="",
