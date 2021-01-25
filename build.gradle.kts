@@ -3,11 +3,12 @@ import edu.rit.gis.sunspec.gradle.SunSpecGen
 group = "edu.rit.gis.sunspec"
 version = "1.0-SNAPSHOT"
 
+
 /*
  * TO PUBLISH:  gradle publishToMavenLocal
  */
 plugins {
-    kotlin("jvm") version "1.4.10" apply true
+    kotlin("jvm") version "1.4.20" apply true
     `java-library` apply true
     java
     `maven-publish` apply true
@@ -19,8 +20,14 @@ repositories {
 }
 
 
+
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.4.21")
+
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-reflect:1.4.21")
+    }
 }
 
 

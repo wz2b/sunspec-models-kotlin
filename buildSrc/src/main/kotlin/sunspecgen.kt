@@ -1,7 +1,7 @@
 package edu.rit.gis.sunspec.gradle
 
-import kotlinx.dom.asElementList
 import org.w3c.dom.Document
+import org.w3c.dom.Element
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
 import java.io.File
@@ -181,4 +181,20 @@ class SunSpecKotlinEmitter {
         }
     }
 
+}
+
+fun NodeList.asElementList(): List<Element> = if (length == 0) emptyList() else ElementListAsList(this)
+private class ElementListAsList(private val nodeList: NodeList) : AbstractList<Element>() {
+    override fun get(index: Int): Element {
+        val node = nodeList.item(index)
+        if (node == null) {
+            throw IndexOutOfBoundsException("NodeList does not contain a node at index: " + index)
+        } else if (node.nodeType == Node.ELEMENT_NODE) {
+            return node as Element
+        } else {
+            throw IllegalArgumentException("Node is not an Element as expected but is $node")
+        }
+    }
+
+    override val size: Int get() = nodeList.length
 }
