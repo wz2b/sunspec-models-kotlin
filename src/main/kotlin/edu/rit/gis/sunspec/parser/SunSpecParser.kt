@@ -2,6 +2,9 @@ package edu.rit.gis.sunspec.parser
 
 import edu.rit.gis.sunspec.annotations.SunSpecPoint
 import edu.rit.gis.sunspec.models.Model_1
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
+import kotlin.experimental.and
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.KProperty
 import kotlin.reflect.full.memberProperties
@@ -62,4 +65,24 @@ class SunSpecParser {
     }
 
 
+}
+
+class SunSpecBytes constructor(val data: ByteArray) {
+    val bb = ByteBuffer.wrap(data)
+    init {
+        bb.order(ByteOrder.BIG_ENDIAN)
+    }
+
+    fun toUInt16(offset: Int): Int {
+        return bb.getShort(offset).toUShort().toInt()
+    }
+
+    fun toString(offset: Int, size: Int): String {
+        val temp = data.slice(offset until (offset + size))
+        return String(temp.toByteArray()).trimEnd()
+    }
+
+    fun toInt16(offset: Int): Int {
+        return bb.getShort(offset).toInt()
+    }
 }

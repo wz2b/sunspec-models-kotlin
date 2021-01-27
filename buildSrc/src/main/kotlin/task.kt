@@ -1,4 +1,5 @@
 package edu.rit.gis.sunspec.gradle
+
 import org.gradle.api.DefaultTask
 import org.gradle.api.InvalidUserDataException
 import java.io.File
@@ -21,22 +22,23 @@ public open class SunSpecGen : DefaultTask() {
     fun runTask() {
         val dest = File(outputDir)
         if (dest.exists()) {
-            if(dest.isDirectory == false) {
+            if (dest.isDirectory == false) {
                 throw InvalidUserDataException("${dest.absolutePath} exists but is not a directory")
             }
         } else {
             dest.mkdirs()
         }
 
+        getLogger().info("Finding models")
 
         var input = File(inputDir)
-        if( input.exists()== false or input.isDirectory == false) {
+        if (input.exists() == false or input.isDirectory == false) {
             throw InvalidUserDataException("$inputDir doesn't exist or is not a directory")
         }
 
 
-        input.walkTopDown().filter { it.isFile && it.extension == "xml" }.forEach {
-            val outputFile = File(outputDir).resolve( "${it.nameWithoutExtension}.kt")
+        input.walkTopDown().filter { it.isFile && it.extension == "json" && it.name.startsWith("model_") }.forEach {
+            val outputFile = File(outputDir).resolve("${it.nameWithoutExtension}.kt")
             val c = SunSpecKotlinEmitter(it, pkg, annotationsPkg).parse().emit()
             val fn = it.nameWithoutExtension + ".kt"
             val os = outputFile.outputStream()

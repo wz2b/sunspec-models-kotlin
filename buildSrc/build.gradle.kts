@@ -1,4 +1,5 @@
 import org.gradle.kotlin.dsl.`kotlin-dsl`
+
 plugins {
     kotlin("jvm") version "1.4.20" apply true
     `kotlin-dsl`
@@ -10,8 +11,8 @@ repositories {
 }
 
 dependencies {
-//    implementation("org.jetbrains.kotlinx:kotlinx.dom:0.0.10")
     implementation(gradleApi())
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.+")
 }
 
 java {

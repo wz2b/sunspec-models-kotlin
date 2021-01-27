@@ -12,6 +12,7 @@ plugins {
     `java-library` apply true
     java
     `maven-publish` apply true
+    kotlin("plugin.serialization") version "1.4.20"
 }
 
 repositories {

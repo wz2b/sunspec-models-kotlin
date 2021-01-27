@@ -1,131 +1,148 @@
 package edu.rit.gis.sunspec.gradle
 
-import org.w3c.dom.Document
-import org.w3c.dom.Element
-import org.w3c.dom.Node
-import org.w3c.dom.NodeList
 import java.io.File
-import javax.xml.parsers.DocumentBuilderFactory
-import javax.xml.xpath.XPathConstants
-import javax.xml.xpath.XPathFactory
-
-
-fun Node.getAttributeAsString(name: String): String? {
-    val attr = attributes.getNamedItem(name)
-    if (attr != null) {
-        return attr.nodeValue
-    } else {
-        return null
-    }
-}
-
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.DeserializationFeature
+import org.gradle.api.InvalidUserDataException
+import kotlin.reflect.KClass
 
 class SunSpecKotlinEmitter {
     val file: File
     val builder = StringBuilder()
-    val xpath = XPathFactory.newInstance().newXPath()
-    val doc: Document
     val pkg: String
     val importAnnotations: String
+    val mapper: ObjectMapper
+
+    companion object {
+        val TAB = "    "
+    }
 
     constructor(file: File, pkg: String, importPkg: String) {
         this.file = file
         this.pkg = pkg
         this.importAnnotations = importPkg
-        doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file)
-        doc.documentElement.normalize()
+        mapper = jacksonObjectMapper()
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+
     }
 
-
     fun parse(): SunSpecKotlinEmitter {
-        /*
-         * Per schema, only one model allowed per document
-         */
-        val model = xpath.evaluate("/sunSpecModels/model", doc, XPathConstants.NODE) as Node
-        val modelId = model.getAttributeAsString("id")?.toInt()
-        val len = model.getAttributeAsString("len")?.toInt()
-        val modelName = model.getAttributeAsString("name") ?: "model_${modelId}"
+
+        val initBuilder = StringBuilder()
+
+        val model = mapper.readValue(file.readText(), SunSpecModelDefinition::class.java)
+        builder.append("""
+            /*
+             * Model ${model.id}
+             * ${model.group.name}
+             * ${model.group.desc}
+             */
+            
+            package ${pkg}
+            import ${importAnnotations}
+            
+            data class Model_${model.id} (
+            
+        """.trimIndent())
 
 
-        val modelLabel = xpath.evaluate("/sunSpecModels/strings/model/label", model, XPathConstants.STRING) as String
-        val modelDescr =
-            xpath.evaluate("/sunSpecModels/strings/model/description", model, XPathConstants.STRING) as String?
-        val modelNotes =
-            xpath.evaluate("/sunSpecModels/strings/model/notes", model, XPathConstants.STRING) as String?
+        var offset = 0
+        model.group.points.iterator().forEach { point ->
 
-        builder.append("/*\n")
-        if (modelLabel != null) builder.append(" * $modelLabel\n")
-        if (modelDescr != null) builder.append(" *\n * $modelDescr\n")
-        if (modelNotes != null) builder.append(" *\n * $modelNotes\n")
-        builder.append(" */\n")
+            val kt = getTypeFromString(point.type)
+            val ktTypeName = kt.simpleName
+            val typeLen = getLengthFromTypeString(point.type)
+
+            if (typeLen == 0 && point.size == 0) {
+                throw InvalidUserDataException("In file ${file.path} type ${point.type} does not specify a length and there is no size parameter")
+            }
+
+            val len = if (point.size > 0) point.size else typeLen
+            if (ktTypeName != null) {
+                when (point.type) {
+                    "uint16" -> {
+                        builder.append(makePoint(point, offset, typeLen, ktTypeName))
+                        initBuilder.append(TAB.repeat(4)).append("${point.name} = bb.toUInt16(${offset*2}),\n")
+                    }
+
+                    "string" -> {
+                        builder.append(makePoint(point, offset, typeLen, ktTypeName))
+                        initBuilder.append(TAB.repeat(4)).append("${point.name} = bb.toString(${offset*2}, $len),\n")
+                    }
+
+                    else -> {
+                        builder.append(TAB).append("/* ${point.name} (${point.type}) ignored */\n")
+                    }
+                }
+            }
 
 
-        /*
-         * Add the package name, if provided
-         */
-        if((pkg != null) and (pkg.length > 0)) {
-            builder.append("package $pkg\n")
+
+
+
+            offset = offset + len
         }
 
-        /*
-         * Add an import line for the annotations, if provided
-         */
-        if((importAnnotations != null) and (importAnnotations.length > 0)) {
-            builder.append("\nimport $importAnnotations\n")
-        }
-
-        builder.append("\n@SunSpecModel(id=${modelId}, len=${len}, name=\"${modelName}\")\n")
-        builder.append("class Model_$modelId {\n")
-
-
-        (xpath.evaluate("block", model, XPathConstants.NODESET) as NodeList)
-            .asElementList().forEach(::parseBlock)
-
-        builder.append("}\n")
+        builder.append(") {\n")
+                .append("""
+                        |companion object {
+                        |    fun parse(bytes: ByteArray): Model_${model.id} {
+                        |        val bb = SunSpecBytes(bytes)
+                        |""".trimMargin().prependIndent())
+                .append('\n')
+                .append("            return Model_${model.id}(\n")
+                .append(initBuilder)
+                .append("            )").append("\n")
+                .append("        }").append('\n') /* end parser function */
+                .append("    }").append('\n') /* end companion object */
+                .append("} /* end class */\n") /* end class */
         return this
     }
 
-    fun parseBlock(block: Node) {
-        val type = block.getAttributeAsString("type") ?: "fixed"
+    fun makePoint(point: point, offset: Int, len: Int, ktTypeName: String): String {
+        return """
+                    |/** ${point.name} ${point.desc} */
+                    |@SunSpecPoint(id="${point.name}", label="${point.label}", offset=${offset}, len=${len}, description="${point.desc?.replace('\"', '\'')}")
+                    |val ${point.name}: ${ktTypeName},
+                    |""".trimMargin().prependIndent()
+    }
 
-        when (type) {
-            "fixed" -> {
-                (xpath.evaluate("point", block, XPathConstants.NODESET) as NodeList)
-                    .asElementList().forEach(::parsePoint)
-            }
-            "repeating" -> {
-            }
+    fun emit(): String {
+        return builder.toString()
+    }
+
+    fun getLengthFromTypeString(type: String): Int {
+        return when (type) {
+            "int16" -> 1
+            "uint16" -> 1
+            "count" -> 1
+            "acc16" -> 1
+            "enum16" -> 2
+            "string" -> 0
+            "int32" -> 2
+            "enum32" -> 2
+            "uint32" -> 2
+            "float32" -> 2
+            "acc32" -> 2
+            "int64" -> 4
+            "acc64" -> 4
+            "enum64" -> 4
+            "uint64" -> 4
+            "float64" -> 4
+            "bitfield16" -> 1
+            "bitfield32" -> 2
+            "sunssf" -> 1
+            "pad" -> 1
+            "ipaddr" -> 2
+            "ipv6addr" -> 8
+            "eui48" -> 3
+            else -> 0
         }
     }
 
-
-    fun parsePoint(point: Node) {
-        val id = point.getAttributeAsString("id")
-        val offset = point.getAttributeAsString("offset")?.toInt()
-        val type = point.getAttributeAsString("type") ?: ""
-        val len = point.getAttributeAsString("len")?.toInt() ?: inferLength(type)
-
-        /* Try to find a label for this field */
-        val pointLabel =
-            xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/label", doc, XPathConstants.STRING) as String? ?: id
-        val pointDescription =
-            xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/description", doc, XPathConstants.STRING) as String?
-                ?: pointLabel
-        val pointNotes =
-            xpath.evaluate("/sunSpecModels/strings/point[@id='$id']/description", doc, XPathConstants.STRING) as String?
-
-        builder.append(
-            """   @SunSpecPoint(id="$id", label="$pointLabel", offset=$offset, len=$len, type="$type",
-                 description="${pointDescription?.replace('\"', '\'')}",
-                 notes="${pointNotes?.replace('\"', '\'')}")
-            """
-        ).trimToSize()
-
-        /*
-         * Many of these should actually be unsigned but because Kotlin's UShort, etc. classes
-         * are inline that breaks reflection, so use Ints here for those
-         */
-        val kt = when (type) {
+    fun getTypeFromString(type: String): KClass<out Any> {
+        val kotlinType = when (type) {
             "int16" -> Short::class
             "uint16" -> Int::class
             "count" -> Int::class
@@ -148,53 +165,6 @@ class SunSpecKotlinEmitter {
             else -> Any::class
         }
 
-
-        builder.append("\n   var $id: ${kt.simpleName}? = null\n\n")
+        return kotlinType
     }
-
-    fun emit(): String {
-        return builder.toString()
-    }
-
-    fun inferLength(type: String): Int {
-        return when (type) {
-            "int16" -> 1
-            "uint16" -> 1
-            "count" -> 1
-            "acc16" -> 1
-            "string" -> 0
-            "int32" -> 2
-            "uint32" -> 2
-            "float32" -> 2
-            "acc32" -> 2
-            "int64" -> 4
-            "uint64" -> 4
-            "float64" -> 4
-            "bitfield16" -> 1
-            "bitfield32" -> 2
-            "sunssf" -> 1
-            "pad" -> 1
-            "ipaddr" -> 2
-            "ipv6addr" -> 8
-            "eui48" -> 3
-            else -> 0
-        }
-    }
-
-}
-
-fun NodeList.asElementList(): List<Element> = if (length == 0) emptyList() else ElementListAsList(this)
-private class ElementListAsList(private val nodeList: NodeList) : AbstractList<Element>() {
-    override fun get(index: Int): Element {
-        val node = nodeList.item(index)
-        if (node == null) {
-            throw IndexOutOfBoundsException("NodeList does not contain a node at index: " + index)
-        } else if (node.nodeType == Node.ELEMENT_NODE) {
-            return node as Element
-        } else {
-            throw IllegalArgumentException("Node is not an Element as expected but is $node")
-        }
-    }
-
-    override val size: Int get() = nodeList.length
 }
