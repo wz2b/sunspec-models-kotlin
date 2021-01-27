@@ -39,7 +39,7 @@ public open class SunSpecGen : DefaultTask() {
 
         input.walkTopDown().filter { it.isFile && it.extension == "json" && it.name.startsWith("model_") }.forEach {
             val outputFile = File(outputDir).resolve("${it.nameWithoutExtension}.kt")
-            val c = SunSpecKotlinEmitter(it, pkg, annotationsPkg).parse().emit()
+            val c = SunSpecKotlinEmitter(it, pkg, annotationsPkg).generateModel().emit()
             val fn = it.nameWithoutExtension + ".kt"
             val os = outputFile.outputStream()
             os.write(c.toByteArray())

@@ -27,7 +27,7 @@ class SunSpecKotlinEmitter {
 
     }
 
-    fun parse(): SunSpecKotlinEmitter {
+    fun generateModel(): SunSpecKotlinEmitter {
 
         val initBuilder = StringBuilder()
 
@@ -41,6 +41,7 @@ class SunSpecKotlinEmitter {
             
             package ${pkg}
             import ${importAnnotations}
+            import edu.rit.gis.sunspec.parser.*
             
             data class Model_${model.id} (
             
@@ -76,11 +77,6 @@ class SunSpecKotlinEmitter {
                     }
                 }
             }
-
-
-
-
-
             offset = offset + len
         }
 
