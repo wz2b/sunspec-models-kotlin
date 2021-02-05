@@ -37,12 +37,13 @@ public open class SunSpecGen : DefaultTask() {
         }
 
 
-        input.walkTopDown().filter { it.isFile && it.extension == "json" && it.name.startsWith("model_") }.forEach {
-            val outputFile = File(outputDir).resolve("${it.nameWithoutExtension}.kt")
-            val c = SunSpecKotlinEmitter(it, pkg, annotationsPkg).generateModel().emit()
-            val fn = it.nameWithoutExtension + ".kt"
+        input.walkTopDown().filter { file ->  file.isFile && file.extension == "json" && file.name.startsWith("model_") }.forEach {
+            file ->
+            val outputFile = File(outputDir).resolve("${file.nameWithoutExtension}.kt")
+            val code = SunSpecKotlinEmitter(file, pkg, annotationsPkg).generateModel()
+            val fn = file.nameWithoutExtension + ".kt"
             val os = outputFile.outputStream()
-            os.write(c.toByteArray())
+            os.write(code.toByteArray())
             os.close()
 
         }

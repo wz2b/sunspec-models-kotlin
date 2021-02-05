@@ -27,140 +27,56 @@ class SunSpecKotlinEmitter {
 
     }
 
-    fun generateModel(): SunSpecKotlinEmitter {
-
-        val initBuilder = StringBuilder()
-
+    fun generateModel(): String {
         val model = mapper.readValue(file.readText(), SunSpecModelDefinition::class.java)
-        builder.append("""
-            /*
-             * Model ${model.id}
-             * ${model.group.name}
-             * ${model.group.desc}
-             */
-            
-            package ${pkg}
-            import ${importAnnotations}
-            import edu.rit.gis.sunspec.parser.*
-            
-            data class Model_${model.id} (
-            
-        """.trimIndent())
 
+        val modelVars = model.group.points
 
-        var offset = 0
-        model.group.points.iterator().forEach { point ->
-
-            val kt = getTypeFromString(point.type)
-            val ktTypeName = kt.simpleName
-            val typeLen = getLengthFromTypeString(point.type)
-
-            if (typeLen == 0 && point.size == 0) {
-                throw InvalidUserDataException("In file ${file.path} type ${point.type} does not specify a length and there is no size parameter")
+        return ModelFile.build("Model_${model.id}") {
+            comment("""
+                Model ${model.id} - ${model.group.name}
+            """.trimIndent())
+            modelPackage("edu.rit.gis.sunspec.models");
+            imports {
+                add(importAnnotations)
+                add("edu.rit.gis.sunspec.parser.SunSpecByteBuffer")
             }
 
-            val len = if (point.size > 0) point.size else typeLen
-            if (ktTypeName != null) {
-                when (point.type) {
-                    "uint16" -> {
-                        builder.append(makePoint(point, offset, typeLen, ktTypeName))
-                        initBuilder.append(TAB.repeat(4)).append("${point.name} = bb.toUInt16(${offset*2}),\n")
-                    }
-
-                    "string" -> {
-                        builder.append(makePoint(point, offset, typeLen, ktTypeName))
-                        initBuilder.append(TAB.repeat(4)).append("${point.name} = bb.toString(${offset*2}, $len),\n")
-                    }
-
-                    else -> {
-                        builder.append(TAB).append("/* ${point.name} (${point.type}) ignored */\n")
-                    }
+            modelClass {
+                modelVars.forEach { addVar(it) }
+                companion {
+                    modelVars.forEach { addVar(it) }
                 }
             }
-            offset = offset + len
-        }
-
-        builder.append(") {\n")
-                .append("""
-                        |companion object {
-                        |    fun parse(bytes: ByteArray): Model_${model.id} {
-                        |        val bb = SunSpecBytes(bytes)
-                        |""".trimMargin().prependIndent())
-                .append('\n')
-                .append("            return Model_${model.id}(\n")
-                .append(initBuilder)
-                .append("            )").append("\n")
-                .append("        }").append('\n') /* end parser function */
-                .append("    }").append('\n') /* end companion object */
-                .append("} /* end class */\n") /* end class */
-        return this
+        }.render().toString()
     }
+}
 
-    fun makePoint(point: point, offset: Int, len: Int, ktTypeName: String): String {
-        return """
-                    |/** ${point.name} ${point.desc} */
-                    |@SunSpecPoint(id="${point.name}", label="${point.label}", offset=${offset}, len=${len}, description="${point.desc?.replace('\"', '\'')}")
-                    |val ${point.name}: ${ktTypeName},
-                    |""".trimMargin().prependIndent()
-    }
+data class SunSpecTypedef(val sunspecType: String, val kotlinType: KClass<out Any>, val numRegisters: Int,
+                          val initString: String) {
+    companion object {
+        private val types = arrayOf<SunSpecTypedef>(
+                SunSpecTypedef("int16", Short::class, 1, "getInt16()"),
+                SunSpecTypedef("uint16", UShort::class, 1, "getUInt16()"),
+                SunSpecTypedef("count", UShort::class, 1, "getUInt16()"),
+                SunSpecTypedef("acc16", UShort::class, 1, "getUInt16()"),
+                SunSpecTypedef("string", String::class, 0, "getString(size)"),
+                SunSpecTypedef("int32", Int::class, 2, "getInt32()"),
+                SunSpecTypedef("uint32", UInt::class, 2, "getUInt32()"),
+                SunSpecTypedef("float32", Float::class, 2, "getFloat32()"),
+                SunSpecTypedef("acc32", UInt::class, 2, "getUInt32()"),
+                SunSpecTypedef("int64", Long::class, 4, "getInt64()"),
+                SunSpecTypedef("uint64", ULong::class, 4, "getUInt64()"),
+                SunSpecTypedef("float64", Double::class, 4, "getFloat64()"),
+                SunSpecTypedef("bitfield16", UShort::class, 1, "getUInt16()"),
+                SunSpecTypedef("bitfield32", UInt::class, 2, "getUInt32()"),
+                SunSpecTypedef("sunssf", UShort::class, 1, "getUInt16()"),
+                SunSpecTypedef("pad", Any::class, 1, "getUInt16()"),
+                SunSpecTypedef("ipaddr", ByteArray::class, 2, "getIpAddress4()"),
+                SunSpecTypedef("ipv6addr", ByteArray::class, 4, "getIpAddress6()"),
+                SunSpecTypedef("eui48", ByteArray::class, 3, "getMac48()"))
+        private val typeMap = types.map { it.sunspecType to it }.toMap()
 
-    fun emit(): String {
-        return builder.toString()
-    }
-
-    fun getLengthFromTypeString(type: String): Int {
-        return when (type) {
-            "int16" -> 1
-            "uint16" -> 1
-            "count" -> 1
-            "acc16" -> 1
-            "enum16" -> 2
-            "string" -> 0
-            "int32" -> 2
-            "enum32" -> 2
-            "uint32" -> 2
-            "float32" -> 2
-            "acc32" -> 2
-            "int64" -> 4
-            "acc64" -> 4
-            "enum64" -> 4
-            "uint64" -> 4
-            "float64" -> 4
-            "bitfield16" -> 1
-            "bitfield32" -> 2
-            "sunssf" -> 1
-            "pad" -> 1
-            "ipaddr" -> 2
-            "ipv6addr" -> 8
-            "eui48" -> 3
-            else -> 0
-        }
-    }
-
-    fun getTypeFromString(type: String): KClass<out Any> {
-        val kotlinType = when (type) {
-            "int16" -> Short::class
-            "uint16" -> Int::class
-            "count" -> Int::class
-            "acc16" -> Int::class
-            "string" -> String::class
-            "int32" -> Int::class
-            "uint32" -> Int::class
-            "float32" -> Float::class
-            "acc32" -> Long::class
-            "int64" -> Long::class
-            "uint64" -> Long::class
-            "float64" -> Double::class
-            "bitfield16" -> Short::class
-            "bitfield32" -> Int::class
-            "sunssf" -> Any::class
-            "pad" -> Any::class
-            "ipaddr" -> String::class
-            "ipv6addr" -> String::class
-            "eui48" -> ByteArray::class
-            else -> Any::class
-        }
-
-        return kotlinType
+        fun get(sunSpecTypeString: String): SunSpecTypedef? = typeMap.get(sunSpecTypeString)
     }
 }

@@ -31,6 +31,11 @@ dependencies {
     }
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs += "-Xuse-experimental=kotlin.ExperimentalUnsignedTypes"
+    }
+}
 
 tasks.register<SunSpecGen>("generate-models") {
     inputDir = "$projectDir/models"
